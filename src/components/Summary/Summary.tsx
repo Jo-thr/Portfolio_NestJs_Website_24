@@ -19,17 +19,35 @@ const Summary = () => {
     }
   }
 
+  const MainText = 'JO THR'
+
   return (
     <div className="relative flex h-screen w-screen p-10">
-      <div className="relative z-10 grid w-full grid-cols-8 grid-rows-4 gap-5">
+      <div
+        className={`absolute left-1/2 top-1/2 z-20 h-max w-max -translate-x-[50%] -translate-y-[50%] transform text-center transition-all duration-700 ease-in-out`}
+      >
+        <div className="relative overflow-hidden text-[10rem] font-black uppercase leading-[8rem]">
+          {MainText.match(/./gu)!.map((char, index) => (
+            <span
+              className="inline-block animate-text-reveal opacity-0"
+              key={`${char}-${index}`}
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="relative z-10 grid w-full animate-appear grid-cols-8 grid-rows-4 gap-5 opacity-0">
         {dataSummary?.map((item: any) => (
           <Card
             key={item.id}
             title={item.title}
+            url={item.link}
             className={`${
               isHovering !== '' &&
               isHovering !== item.title &&
-              'backdrop-blur-md'
+              'backdrop-blur-sm'
             } ${item.link.includes('about') && 'col-span-4 row-span-2'} ${
               item.link.includes('skills') && 'col-span-3 row-span-2'
             } ${item.link.includes('cv') && 'col-span-1 row-span-2'} ${
@@ -46,7 +64,7 @@ const Summary = () => {
           isShowing
             ? '-translate-y-[52%] opacity-100'
             : 'translate-y-0 opacity-0'
-        } absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] text-center text-[10rem] font-black uppercase leading-[8rem]`}
+        } absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] animate-appear text-center text-[10rem] font-black uppercase leading-[8rem]`}
       >
         {isHovering}
       </div>

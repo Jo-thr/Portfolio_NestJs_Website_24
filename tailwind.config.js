@@ -29,6 +29,39 @@ module.exports = {
       colors: {
         ...COLORS,
       },
+      animation: {
+        'text-reveal':
+          'text-reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s forwards',
+        appear: 'appear 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards',
+      },
+      keyframes: {
+        'text-reveal': {
+          '0%': {
+            transform: 'translate(0, 110%)',
+            opacity: 0,
+          },
+          '30%': {
+            transform: 'translate(0, 0)',
+            opacity: 1,
+          },
+          '70%': {
+            transform: 'translate(0, 0)',
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translate(0, -110%)',
+            opacity: 0,
+          },
+        },
+        appear: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+      },
     },
   },
   plugins: [],
