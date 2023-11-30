@@ -64,7 +64,7 @@ const Summary = () => {
           isShowing
             ? '-translate-y-[52%] opacity-100'
             : 'translate-y-0 opacity-0'
-        } absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] animate-appear text-center text-[10rem] font-black uppercase leading-[8rem]`}
+        } absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] animate-appear text-center text-[10rem] font-black uppercase leading-[8rem] opacity-0`}
       >
         {isHovering}
       </div>

@@ -3,7 +3,6 @@ import type { NextRequest } from 'next/server'
 import { i18n } from '@/i18n-config'
 
 export default async function middleware(request: NextRequest) {
-
   const nextIntlMiddleware = createMiddleware({
     locales: [...i18n.locales],
     defaultLocale: i18n.defaultLocale,

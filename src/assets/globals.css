@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply m-0 min-h-screen min-w-full bg-black-base p-0 text-white-base;
+  @apply m-0 min-h-screen min-w-full bg-black-base p-0 font-koulen text-white-base;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

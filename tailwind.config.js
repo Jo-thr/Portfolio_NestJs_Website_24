@@ -29,6 +29,9 @@ module.exports = {
       colors: {
         ...COLORS,
       },
+      fontFamily: {
+        koulen: ['var(--font-koulen)'],
+      },
       animation: {
         'text-reveal':
           'text-reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s forwards',
