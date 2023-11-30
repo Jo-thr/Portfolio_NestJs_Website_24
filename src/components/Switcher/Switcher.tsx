@@ -1,39 +1,32 @@
 'use client'
 
-import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from 'next-intl/client'
-import { useTransition } from 'react'
+import React from 'react'
+import {
+  useRouter,
+  useParams,
+  useSelectedLayoutSegments,
+} from 'next/navigation'
+import { ImageSVG } from '@/components/Icons/Icons'
 
-const Switcher = () => {
+const ChangeLocale = () => {
   const router = useRouter()
-  const pathname = usePathname()
-  const [isPending, startTransition] = useTransition()
-  const locale = useLocale()
+  const params = useParams()
+  const urlSegments = useSelectedLayoutSegments()
 
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const lang = e.target.value
-    startTransition(() => {
-      router.replace(pathname, { locale: lang })
-    })
+  const handleLocaleChange = (newLocale: string) => {
+    router.push(`/${newLocale}/${urlSegments.join('/')}`)
   }
 
   return (
-    <div className="relative flex flex-row items-center">
-      <select
-        name="language"
-        id="language"
-        defaultValue={locale}
-        onChange={handleSelect}
-        className="bg-black text-white rounded py-1 px-2 outline-none"
-      >
-        {['en', 'fr'].map((cur) => (
-          <option key={cur} value={cur}>
-            prout
-          </option>
-        ))}
-      </select>
+    <div className="flex flex-row items-center gap-2 font-koulen text-lg">
+      {ImageSVG['GLOBE']}
+      {params.locale === 'fr' ? (
+        <button onClick={() => handleLocaleChange('en')}>Francais</button>
+      ) : (
+        <button onClick={() => handleLocaleChange('fr')}>English</button>
+      )}
     </div>
   )
 }
 
-export default Switcher
+export default ChangeLocale

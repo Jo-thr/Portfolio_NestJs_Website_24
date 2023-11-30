@@ -2,17 +2,11 @@ import '@/assets/globals.css'
 import { i18n } from '@/i18n-config'
 import type { Metadata } from 'next'
 import { Koulen } from 'next/font/google'
-import Providers from './providers'
 import Navbar from '@/components/Navbar/Navbar'
+import { getDictionary } from '@/hooks/getDictionary'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
-}
-
-type MetadataProps = {
-  params: {
-    lang: 'fr' | 'en'
-  }
 }
 
 const koulen = Koulen({
@@ -21,20 +15,21 @@ const koulen = Koulen({
   variable: '--font-koulen',
 })
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { lang: 'fr' | 'en' }
+  params: { locale: 'en' | 'fr' }
 }) {
+  const dictionary = await getDictionary(params.locale)
   return (
-    <html lang={params.lang}>
+    <html lang={params.locale}>
       <body
         className={`min-h-screen min-w-full overflow-visible ${koulen.variable}`}
       >
-        <Providers locale={params.lang}>{children}</Providers>
-        <Navbar />
+        {children}
+        <Navbar dataSummary={dictionary.summary} />
       </body>
     </html>
   )

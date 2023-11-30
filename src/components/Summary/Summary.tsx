@@ -2,10 +2,16 @@
 
 import { useState } from 'react'
 import Card from './Card'
-import useContent from '@/hooks/useContent'
 
-const Summary = () => {
-  const { dataSummary } = useContent()
+export interface SummaryProps {
+  dataSummary: {
+    id: string
+    title: string
+    link: string
+  }[]
+}
+
+const Summary = ({ dataSummary }: SummaryProps) => {
   const [isShowing, setIsShowing] = useState(false)
   const [isHovering, setIsHovering] = useState('')
 

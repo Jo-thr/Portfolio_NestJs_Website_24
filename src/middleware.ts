@@ -1,19 +1,46 @@
-import createMiddleware from 'next-intl/middleware'
-import type { NextRequest } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import { i18n } from '@/i18n-config'
 
-export default async function middleware(request: NextRequest) {
-  const nextIntlMiddleware = createMiddleware({
-    locales: [...i18n.locales],
-    defaultLocale: i18n.defaultLocale,
-    localeDetection: false,
-  })
+export function middleware(request: NextRequest) {
+  // Check if there is any supported locale in the pathname
+  const pathname = request.nextUrl.pathname
 
-  return nextIntlMiddleware(request)
+  // Check if the default locale is in the pathname
+  if (
+    pathname.startsWith(`/${i18n.defaultLocale}/`) ||
+    pathname === `/${i18n.defaultLocale}`
+  ) {
+    // e.g. incoming request is /en/about
+    // The new URL is now /about
+    return NextResponse.redirect(
+      new URL(
+        pathname.replace(
+          `/${i18n.defaultLocale}`,
+          pathname === `/${i18n.defaultLocale}` ? '/' : ''
+        ),
+        request.url
+      )
+    )
+  }
+
+  const pathnameIsMissingLocale = i18n.locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  )
+
+  if (pathnameIsMissingLocale) {
+    // We are on the default locale
+    // Rewrite so Next.js understands
+
+    // e.g. incoming request is /about
+    // Tell Next.js it should pretend it's /en/about
+    return NextResponse.rewrite(
+      new URL(`/${i18n.defaultLocale}${pathname}`, request.url)
+    )
+  }
 }
 
 export const config = {
-  matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|admin|sitemap.xml|sitemap-0.xml|robots.txt|media).*)',
-  ],
+  // Do not run the middleware on the following paths
+  matcher:
+    '/((?!api|_next/static|_next/image|manifest.json|assets|favicon.ico).*)',
 }
