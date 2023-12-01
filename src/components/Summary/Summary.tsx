@@ -2,12 +2,15 @@
 
 import { useState } from 'react'
 import Card from './Card'
+import LogoWhite from '@public/images/Logo-white.svg'
+import Image from 'next/image'
 
 export interface SummaryProps {
   dataSummary: {
     id: string
     title: string
     link: string
+    logo: boolean
   }[]
 }
 
@@ -50,6 +53,8 @@ const Summary = ({ dataSummary }: SummaryProps) => {
             key={item.id}
             title={item.title}
             url={item.link}
+            logo={item.logo}
+            switchLang={item.switch}
             className={`${
               isHovering !== '' &&
               isHovering !== item.title &&
