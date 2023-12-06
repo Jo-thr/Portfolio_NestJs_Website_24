@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import Card from './Card'
-import LogoWhite from '@public/images/Logo-white.svg'
-import Image from 'next/image'
 
 export interface SummaryProps {
   dataSummary: {

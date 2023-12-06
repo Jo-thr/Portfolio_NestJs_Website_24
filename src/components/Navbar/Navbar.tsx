@@ -3,15 +3,14 @@ import Image from 'next/image'
 import {
   useParams,
   usePathname,
-  useRouter,
   useSelectedLayoutSegments,
 } from 'next/navigation'
 import LogoWhite from '@public/images/Logo-white.svg'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { IconType } from '../Icons/Icons'
-import Button from '../Button/Button'
-import Switcher from '../Switcher/Switcher'
+import { IconType } from '@/components/Icons/Icons'
+import Button from '@/components/Button/Button'
+import Switcher from '@/components/Switcher/Switcher'
 
 export interface NavbarProps {
   dataSummary: {
