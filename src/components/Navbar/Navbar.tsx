@@ -52,7 +52,11 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
   }
 
   return (
-    <div className={`${(pathname === '/' || pathname === '/en') && 'hidden'}`}>
+    <div
+      className={`${
+        (pathname === '/' || pathname === '/en') && 'hidden'
+      } animate-appear opacity-0`}
+    >
       <div
         className={`${
           isOpen
@@ -75,13 +79,17 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
             <h5
               className={`font-koulen ${
                 isOpen && 'opacity-10'
-              } transform transition-all duration-500 ease-in-out`}
+              } transform text-xl transition-all duration-500 ease-in-out`}
             >
               {urlSegments}
             </h5>
           </div>
           <div className="flex flex-row items-center justify-end gap-10">
-            <Switcher />
+            <Switcher
+              className={`${
+                isOpen && 'opacity-10'
+              } relative transform transition-all duration-500 ease-in-out`}
+            />
             <Button
               title={isOpen ? 'FERMER' : 'MENU'}
               icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
@@ -97,16 +105,24 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
             <h5 className={`font-koulen text-lg`}>Pages</h5>
             <div className="flex flex-row gap-4">
               {dataSummary?.map((item: any) => (
-                <div key={item.id}>{item.link}</div>
+                <Link
+                  key={item.id}
+                  href={item.link}
+                  className={`${
+                    pathname.includes(item.link) && 'line-through opacity-20'
+                  }`}
+                >
+                  {item.link}
+                </Link>
               ))}
             </div>
           </div>
         )}
       </div>
       <div
-        className={`bg-black fixed transition duration-500  ${
+        className={`fixed top-0 left-0 bg-black-base transition duration-500  ${
           isOpen
-            ? 'z-40 h-screen  w-screen opacity-70 !backdrop-blur-sm'
+            ? 'z-40 h-screen  w-full opacity-80 !backdrop-blur-sm'
             : 'h-0 w-0 opacity-0'
         }`}
       />

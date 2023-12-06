@@ -36,6 +36,8 @@ module.exports = {
         'text-reveal':
           'text-reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s forwards',
         appear: 'appear 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards',
+
+        reveal: 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
       },
       keyframes: {
         'text-reveal': {
@@ -55,6 +57,10 @@ module.exports = {
             transform: 'translate(0, -110%)',
             opacity: 0,
           },
+        },
+        reveal: {
+          from: { transform: 'translate(0, 110%)', opacity: 0 },
+          to: { transform: 'translate(0, 0)', opacity: 1 },
         },
         appear: {
           '0%': {

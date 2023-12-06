@@ -43,5 +43,29 @@
       "switch": true
     }
   ],
+  "aboutPage": {
+    "mainTitle": "À propos",
+    "mainDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio eaque perferendis accusamus aliquam facilis sapiente, dolores id ratione deserunt qui nulla ea obcaecati inventore exercitationem modi quidem, doloremque alias."
+  },
+  "skillPage": {
+    "mainTitle": "Compétences",
+    "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!"
+  },
+  "cvPage": {
+    "mainTitle": "CV",
+    "mainDesc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem neque sed magnam laboriosam facilis sunt fuga modi doloribus exercitationem sequi architecto, nam asperiores vero, sapiente libero ea voluptas natus labore. Dignissimos, deserunt. Fugiat maiores saepe unde, consequatur quibusdam cumque nulla eligendi placeat illo aliquam modi!"
+  },
+  "worksPage": {
+    "mainTitle": "Sélection de travaux",
+    "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!"
+  },
+  "rsPage": {
+    "mainTitle": "Réseaux sociaux",
+    "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!"
+  },
+  "contactPage": {
+    "mainTitle": "Contact",
+    "mainDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio eaque perferendis accusamus aliquam facilis sapiente, dolores id ratione deserunt qui nulla ea obcaecati inventore exercitationem modi quidem, doloremque alias."
+  },
   "menu": "Menu"
 }

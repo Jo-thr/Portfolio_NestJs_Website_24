@@ -6,11 +6,15 @@ import {
   useParams,
   useSelectedLayoutSegments,
 } from 'next/navigation'
-import { ImageSVG } from '@/components/Icons/Icons'
+import { Globe } from 'lucide-react'
 
-const ChangeLocale = () => {
+export interface SwitchMinProps {
+  className: string
+}
+
+const Switcher = ({ className }: SwitchMinProps) => {
+  const locale = useParams()?.locale
   const router = useRouter()
-  const params = useParams()
   const urlSegments = useSelectedLayoutSegments()
 
   const handleLocaleChange = (newLocale: string) => {
@@ -18,15 +22,26 @@ const ChangeLocale = () => {
   }
 
   return (
-    <div className="flex flex-row items-center gap-2 font-koulen text-lg">
-      {ImageSVG['GLOBE']}
-      {params.locale === 'fr' ? (
-        <button onClick={() => handleLocaleChange('en')}>Francais</button>
+    <div className={`${className}`}>
+      {locale === 'fr' ? (
+        <button
+          onClick={() => handleLocaleChange('en')}
+          className="flex flex-row gap-2"
+        >
+          <Globe className="stroke-white-base " />
+          FR
+        </button>
       ) : (
-        <button onClick={() => handleLocaleChange('fr')}>English</button>
+        <button
+          onClick={() => handleLocaleChange('fr')}
+          className="flex flex-row gap-2"
+        >
+          <Globe className="stroke-white-base " />
+          EN
+        </button>
       )}
     </div>
   )
 }
 
-export default ChangeLocale
+export default Switcher

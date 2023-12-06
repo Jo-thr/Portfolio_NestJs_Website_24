@@ -48,7 +48,7 @@ const Card = ({
                   <Image
                     src={LogoWhite}
                     alt={'Logo'}
-                    className="transition-all duration-300 ease-in-out hover:opacity-40"
+                    className="transition-all duration-300  ease-in-out hover:opacity-40"
                   />
                 </div>
                 <div className="absolute top-0 left-[5.15rem] z-20 h-20 w-5 animate-appear bg-black-base opacity-0">
