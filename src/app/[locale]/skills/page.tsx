@@ -1,4 +1,5 @@
 import Heading from '@/components/Heading/Heading'
+import SkillsBlock from '@/components/SkillsBlock/SkillsBlock'
 import { getDictionary } from '@/hooks/getDictionary'
 
 const SkillsPage = async ({
@@ -9,12 +10,13 @@ const SkillsPage = async ({
   const dictionary = await getDictionary(locale)
   const data = dictionary.skillPage
   return (
-    <div className="relative flex h-screen w-full items-center justify-center ">
+    <div className="relative flex h-full w-full flex-col items-center justify-center ">
       <Heading
         title={data.mainTitle}
         description={data.mainDesc}
-        className="absolute top-10 px-20"
+        className="relative top-10 px-20"
       />
+      <SkillsBlock data={data.skills} className="mt-40" />
     </div>
   )
 }
