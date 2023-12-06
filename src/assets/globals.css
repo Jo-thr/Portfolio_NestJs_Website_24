@@ -17,3 +17,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  @apply text-[8rem] font-black uppercase;
+}
+h2 {
+  @apply text-7xl font-black uppercase;
+}
+h3 {
+  @apply font-koulen text-4xl;
+}

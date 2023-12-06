@@ -51,6 +51,48 @@
   "skillPage": {
     "mainTitle": "Skills",
     "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!",
+    "listing": [
+      {
+        "id": "01",
+        "title": "Frontend addict",
+        "phrase": "Addiction is anything that drains life of meaning while making it seem better."
+      },
+      {
+        "id": "02",
+        "title": "Pixel perfect",
+        "phrase": "Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away."
+      },
+      {
+        "id": "03",
+        "title": "Responsive",
+        "phrase": "What makes man is his great adaptability."
+      },
+      {
+        "id": "04",
+        "title": "Gsap",
+        "phrase": "An artist doesn't bend to reality, he invents it."
+      },
+      {
+        "id": "05",
+        "title": "Creative coder",
+        "phrase": "Creativity without strategy is called art."
+      },
+      {
+        "id": "06",
+        "title": "Love discovering new creative world",
+        "phrase": "It's the artist's role to worry about where the world is going."
+      },
+      {
+        "id": "07",
+        "title": "Accessibility",
+        "phrase": "Practice makes perfect."
+      },
+      {
+        "id": "08",
+        "title": "Seo",
+        "phrase": "The best place to hide a dead body is page 2 of Google search results."
+      }
+    ],
     "tags": [
       { "id": "01", "name": "All" },
       { "id": "02", "name": "Back" },
@@ -137,5 +179,74 @@
     "mainTitle": "Contact",
     "mainDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio eaque perferendis accusamus aliquam facilis sapiente, dolores id ratione deserunt qui nulla ea obcaecati inventore exercitationem modi quidem, doloremque alias."
   },
-  "menu": "Menu"
+  "menu": "Menu",
+  "footer": {
+    "adressTitle": "Address",
+    "adress": {
+      "area": "Haute-Savoie",
+      "city": "Bonneville, FR"
+    },
+    "linksTitle": "Links",
+    "links": [
+      {
+        "id": "01",
+        "title": "About",
+        "link": "/about"
+      },
+      {
+        "id": "04",
+        "title": "Selected works",
+        "link": "/works"
+      },
+      {
+        "id": "06",
+        "title": "Contact",
+        "link": "/contact"
+      },
+      {
+        "id": "02",
+        "title": "Skills",
+        "link": "/skills"
+      },
+      {
+        "id": "03",
+        "title": "CV",
+        "link": "/cv"
+      },
+      {
+        "id": "05",
+        "title": "Socials network",
+        "link": "/socials"
+      }
+    ],
+    "socialsTitle": "Socials",
+    "socials": [
+      {
+        "id": "01",
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/jonathan-thuayre-374739b0/"
+      },
+      {
+        "id": "02",
+        "title": "GitHub",
+        "link": "https://github.com/Jo-thr"
+      },
+      {
+        "id": "03",
+        "title": "Instagram",
+        "link": "https://www.instagram.com/jonathan.thr/"
+      },
+      {
+        "id": "04",
+        "title": "Twitter / X",
+        "link": "https://twitter.com/john_thr"
+      }
+    ],
+    "contactTitle": "Contact",
+    "contact": {
+      "title": "Contact me",
+      "url": "/contact"
+    },
+    "copyright": "2023 @ JOTHR. ALL RIGHT RESERVED"
+  }
 }

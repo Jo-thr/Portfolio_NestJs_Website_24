@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { Koulen } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
 import { getDictionary } from '@/hooks/getDictionary'
+import Gradient from '@/components/Gradient/Gradient'
+import Footer from '@/components/Footer/Footer'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -30,6 +32,8 @@ export default async function RootLayout({
       >
         {children}
         <Navbar dataSummary={dictionary.summary} />
+        <Gradient />
+        <Footer data={dictionary.footer} />
       </body>
     </html>
   )

@@ -51,10 +51,10 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
   }
 
   return (
-    <div
+    <nav
       className={`${
         (pathname === '/' || pathname === '/en') && 'hidden'
-      } animate-appear opacity-0`}
+      } absolute z-40 animate-appear opacity-0`}
     >
       <div
         className={`${
@@ -66,7 +66,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
         <div
           className={`${
             isOpen ? 'opacity-100 ' : 'opacity-0'
-          } text-white-lighten absolute left-1/2 -mt-10 w-max translate-x-[-50%] font-koulen tracking-widest transition-opacity  delay-500 duration-500`}
+          } text-white-lighten absolute left-1/2 z-40 -mt-10 w-max translate-x-[-50%] font-koulen tracking-widest transition-opacity delay-500 duration-500`}
         >
           - Menu -
         </div>
@@ -110,6 +110,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
                   className={`${
                     pathname.includes(item.link) && 'line-through opacity-20'
                   }`}
+                  onClick={handleMenu}
                 >
                   {item.link}
                 </Link>
@@ -125,7 +126,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
             : 'h-0 w-0 opacity-0'
         }`}
       />
-    </div>
+    </nav>
   )
 }
 

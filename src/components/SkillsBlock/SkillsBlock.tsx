@@ -48,11 +48,11 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
         {(isSelected.length ? selectedSkills : favSkills).map((item) => (
           <div
             key={item.id}
-            className={`flex aspect-square w-full flex-col gap-6 rounded-md border-4 border-orange-300 p-8`}
+            className={`flex aspect-square w-full flex-col gap-6 rounded-md border-4 border-orange-300 p-8 transition-all duration-500 ease-in-out hover:animate-pulse hover:bg-orange-300/5 `}
           >
             <p className="text-lg">{item.domain}</p>
             <div className="h-1 w-full rounded-full bg-orange-300" />
-            <h3 className="font-koulen text-4xl ">{item.name}</h3>
+            <h3>{item.name}</h3>
           </div>
         ))}
       </div>
