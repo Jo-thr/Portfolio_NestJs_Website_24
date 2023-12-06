@@ -10,7 +10,7 @@ export interface SwitchMinProps {
 
 const Heading = ({ className, title, description }: SwitchMinProps) => {
   return (
-    <div className={`${className} flex w-full flex-col`}>
+    <div className={`${className} flex h-max w-full flex-col`}>
       <div
         className={`flex min-h-min w-max flex-col items-start overflow-hidden`}
       >

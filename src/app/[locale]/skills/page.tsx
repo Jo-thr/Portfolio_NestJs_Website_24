@@ -14,9 +14,9 @@ const SkillsPage = async ({
       <Heading
         title={data.mainTitle}
         description={data.mainDesc}
-        className="relative top-10 px-20"
+        className="relative mt-10 px-20"
       />
-      <SkillsBlock data={data.skills} className="mt-40" />
+      <SkillsBlock data={data} />
     </div>
   )
 }
