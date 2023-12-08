@@ -25,10 +25,13 @@ const SkillListing = ({ data, className }: SkillListingProps) => {
                 </span>
               ))}
             </h2>
-            <div className="flex w-1/2 transform flex-row gap-1 text-lg opacity-0 transition-all duration-700 ease-in-out group-hover:animate-pulse group-hover:opacity-100">
-              <Quote width={14} />
+            <div className="flex w-1/2 transform flex-row gap-1 text-lg text-teal-300 opacity-0 transition-all duration-700 ease-in-out hover:!animate-none group-hover:animate-pulse group-hover:opacity-100">
+              <Quote width={14} className="fill-teal-300 stroke-teal-300 " />
               <p className="cursor-default hover:underline">{listing.phrase}</p>
-              <Quote width={14} className="mt-1" />
+              <Quote
+                width={14}
+                className="mt-1 fill-teal-300 stroke-teal-300 "
+              />
             </div>
           </div>
         ))}

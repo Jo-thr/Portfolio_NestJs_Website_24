@@ -15,7 +15,7 @@ const Heading = ({ title, description }: SwitchMinProps) => {
           {title}
         </h1>
       </div>
-      <p className="w-2/3 transform animate-reveal italic opacity-0 transition-all duration-700 ease-in-out">
+      <p className="w-2/3 transform animate-reveal italic text-teal-200 opacity-0 transition-all duration-700 ease-in-out">
         {description}
       </p>
     </div>
