@@ -165,11 +165,174 @@
   },
   "cvPage": {
     "mainTitle": "CV",
-    "mainDesc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem neque sed magnam laboriosam facilis sunt fuga modi doloribus exercitationem sequi architecto, nam asperiores vero, sapiente libero ea voluptas natus labore. Dignissimos, deserunt. Fugiat maiores saepe unde, consequatur quibusdam cumque nulla eligendi placeat illo aliquam modi!"
+    "mainDesc": "Fashion has always been a real subject for all eras, so why settle for just one cap?"
   },
   "worksPage": {
     "mainTitle": "Selected works",
-    "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!"
+    "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!",
+    "projects": [
+      {
+        "id": 1,
+        "slug": "francetv",
+        "name": "France TV Lab",
+        "categorie": "Front-End Project",
+
+        "short_description": "Everyone knows France TV, but what's France Tv Lab?",
+        "description": "The FTV Lab is the blog dedicated to the innovation of France Television. It's a collaborative platform, with a simplified administration, developed and deployed in 3 months. To serve its strategic positioning in the context of the merger of France Télévisions and Radio France, France TV wanted to redesign its innovation platform.\nThe project was conducted in agile mode in a context of mature business needs and a strong commitment in terms of scope/timing.\n The success of this project led FTV info to entrust two other projects of bigger scale to Wizards Technologies teams. Thus, we have renovated the application in order to make it lighter, more dynamic and powerful.",
+
+        "imgBgColor": "bg-FTV.jpg",
+        "imgFirst": "FTV-MOCKUP.png",
+
+        "poste": "Front-End Developer",
+        "techno": "Nuxt.js, Tailwind, Laravel 7, Docker",
+        "color": "#0123FF",
+        "site": "https://www.francetvlab.fr",
+
+        "mission": "Redesigning the France TV Lab website to be more intuitive, to meet many criteria of accessibility and interactive videos (their domain). Use of the Vue.js framework with tailwinds for the front and Laravel Nova for the back.",
+
+        "projet": [
+          { "img": "01-FTV.png", "title": "Topics Page" },
+          { "img": "02-FTV.png", "title": "Article Page" }
+        ]
+      },
+      {
+        "id": 2,
+        "slug": "parisshopping",
+        "name": "Paris Shopping",
+        "categorie": "Webdesign / Ui Project",
+
+        "short_description": "The e-shop that references only independent Parisian stores.",
+        "description": "Paris.Shopping showcases the best Parisian boutiques and brands, and each week offers THE selection of Parisians' favorite products: the most stylish, the most trendy, the most so chic, in short... the most Parisian. So that everyone, whether they come as a neighbor or from the other side of the world, can access the best shopping addresses. And to the spirit of Paris.",
+
+        "imgBgColor": "bg-PPS.jpg",
+        "imgFirst": "PARIS-SHOPPING-MOCKUP.png",
+
+        "poste": "Art Director",
+        "techno": "Magento II, Adobe suite",
+        "color": "#F04249",
+
+        "mission": "Creation of the whole visual identity of Paris.shopping, elaboration of a graphic charter to then create all the necessary supports. Creation of print supports (business cards, commercial presentations, packaging, ..) and web supports (models and development of the e-commerce site, emailing, contact support, video, social networks).",
+
+        "projet": [
+          { "img": "01-PPS.png", "title": "Home Page" },
+          { "img": "02-PPS.png", "title": "Article & Shop Page" },
+          { "img": "03-PPS.png", "title": "Product Page" },
+          { "img": "04-PPS.png", "title": "About & Cart Page" },
+          { "img": "05-PPS.png", "title": "Order Mail" }
+        ]
+      },
+      {
+        "id": 3,
+        "slug": "axagogreen",
+        "name": "Axa GoGreen",
+        "categorie": "Full-Stack Project",
+
+        "short_description": "GoGreen help you make informed choices\nabout improving the energy efficiency of your home.",
+        "description": "GoGreen has been created to help you make informed choices about improving the energy efficiency of your home. There are lots of options open to you and this website explains them all – from solar power and insulation, to heat pumps and deep retrofits. They can all bring you significant energy savings, while adding to the value of your property.\nWe also show you how to fund your home improvements, both through grants provided by the Irish Government, and low-interest green loans. And importantly, we provide a directory of trusted partners that can carry out the work for you.\nGo Green has been created by AXA, one of Ireland’s leading insurance companies. When you feel protected by AXA, you can go further.",
+
+        "imgBgColor": "bg-AGG.jpg",
+        "imgFirst": "AGG-MOCKUP.png",
+
+        "poste": "Full-Stack Developer",
+        "techno": "Next.js, Tailwind, Contentful, Netlify, Hubspot, SonarQube, Axeptio",
+        "color": "#A3DFC6",
+
+        "mission": "Create a site from scratch, I initiated the project in Next.Js, implemented all desired libraries. The client chose Axeptio for the cookie management, Hubspot for the forms. In close collaboration with the Ui designers, I quickly integrated all the pages to then leave room for the connection with Contentful for a dynamic content created by the client. Project still in progress.",
+
+        "projet": [
+          { "img": "01-AGG.png", "title": "Home Page" },
+          { "img": "02-AGG.png", "title": "Build Your Knowledge Page" },
+          { "img": "03-AGG.png", "title": "Discover Your Options Page" },
+          { "img": "04-AGG.png", "title": "Fund & Protect Page" },
+          { "img": "05-AGG.png", "title": "Find Your Partner Page" },
+          { "img": "06-AGG.png", "title": "FAQs Page" },
+          { "img": "07-AGG.png", "title": "FAQ Page" }
+        ]
+      },
+      {
+        "id": 4,
+        "slug": "rexel",
+        "name": "Rexel Expo",
+        "categorie": "Full-Stack Project",
+
+        "short_description": "Expert in multi-channel distribution for the energy world",
+        "description": "World expert in multi-channel professional distribution of products and services for the energy sector. The Group's offer covers a wide range of sustainable and innovative products, solutions and services in the fields of technical equipment, automation and energy management for construction, renovation, maintenance and production.",
+
+        "imgBgColor": "bg-REXEL.jpg",
+        "imgFirst": "REXEL-MOCKUP.png",
+
+        "poste": "Full-Stack Developer",
+        "techno": "Next.js, Tailwind, Netlify",
+        "color": "#00448c",
+
+        "mission": "Atypical request, the client wanted for his next showroom, a website with a western decor, and moreover, with the look of a website but presented on a mobile terminal... challenge! So I started to initialize the project with Next.js and tailwindCss, then I scrapped some product categories directly on their e-commerce, and simulated a purchase tunnel with confirmation.",
+
+        "projet": [
+          { "img": "01-REXEL.png", "title": "Home Page" },
+          { "img": "02-REXEL.png", "title": "Tools Page" },
+          { "img": "03-REXEL.png", "title": "Catalog Page" },
+          { "img": "04-REXEL.png", "title": "Product Page" },
+          { "img": "05-REXEL.png", "title": "Cart Page" },
+          { "img": "06-REXEL.png", "title": "Confirmation Cart Page" }
+        ]
+      },
+      {
+        "id": 5,
+        "slug": "wedigitalgarden",
+        "name": "WeDigital Garden",
+        "categorie": "Full-Stack Project",
+
+        "short_description": "A green and responsible production\nstudio is committed to its clients.",
+        "description": "A production studio that commits to its clients to create a business impact, to improve their relevance by reinventing their offers or core business model, and to deliver value more quickly through the implementation of cross-disciplinary teams and methods.",
+
+        "imgBgColor": "bg-WDG.jpg",
+        "imgFirst": "WDG-MOCKUP.png",
+
+        "poste": "Full-Stack Developer",
+        "techno": "Nuxt.js, Tailwind, Laravel 7",
+        "site": "https://wedigital.garden",
+        "color": "#36A364",
+
+        "mission": "Redesign of the WeDigital.Garden website with the use of the Vue.js framework accompanied by tailwinds for the front end and Laravel Nova for the back end to add new features, create new pages for the website and manage the language change.",
+
+        "projet": [
+          { "img": "01-WDG.png", "title": "Home Page" },
+          { "img": "02-WDG.png", "title": "Methods Page" },
+          { "img": "03-WDG.png", "title": "Team Page" },
+          { "img": "04-WDG.png", "title": "Culture Page" },
+          { "img": "05-WDG.png", "title": "Projects Page" },
+          { "img": "06-WDG.png", "title": "Project Page" },
+          { "img": "07-WDG.png", "title": "Mentions Page" }
+        ]
+      },
+      {
+        "id": 7,
+        "slug": "one4you",
+        "name": "One4You",
+        "categorie": "Webdesign / Ui Project",
+
+        "short_description": "Make your purchases online,\nand receive some cashback, easy no?",
+        "description": "In charge of the global management of the visual identity of One4You. I ensure the coherence and construction of One4You's image, making it evolve in accordance with the economic constraints and the strategic and commercial objectives defined by the general management. I design and coordinate all the media that convey the visual identity of One4You, as well as the brands, signs and young talents that are attached to it.",
+
+        "imgBgColor": "bg-O4Y.jpg",
+        "imgFirst": "ONE4YOU-MOCKUP.png",
+
+        "poste": "Artistic Manager",
+        "techno": "Prestashop, Adobe Suite, AB Tasty",
+        "site": "https://www.one4you.com",
+        "color": "#50E1C3",
+
+        "mission": "Creation of the whole visual identity of One4You, elaboration of a graphic charter to then create all the necessary supports. Creation of print media (business cards, commercial presentations, packaging, ..) and web media (models and development of the e-commerce site, emailing, contact support, video, social networks).",
+
+        "projet": [
+          { "img": "01-O4Y.png", "title": "Home Page" },
+          { "img": "02-O4Y.png", "title": "Shopping Page" },
+          { "img": "03-O4Y.png", "title": "Product Page" },
+          { "img": "04-O4Y.png", "title": "Account Page" },
+          { "img": "05-O4Y.png", "title": "Order Page" }
+        ]
+      }
+    ]
   },
   "rsPage": {
     "mainTitle": "Socials network",

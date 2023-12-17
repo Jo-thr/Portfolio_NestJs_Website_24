@@ -31,11 +31,10 @@ export interface FooterProps {
 }
 
 const Footer = ({ data }: FooterProps) => {
-  const urlSegments = useSelectedLayoutSegments()
   const pathname = usePathname()
   console.log(pathname)
   return (
-    <footer className="relative z-50 flex flex-col items-center gap-40 bg-teal-200 px-60 py-40 text-black-base">
+    <footer className="relative z-50 flex flex-col items-center gap-40 rounded-t-3xl bg-teal-200 px-60 py-40 text-black-base">
       <div className="flex w-full flex-row justify-between text-lg font-light">
         <div className="flex flex-col">
           <h3>{data.adressTitle}</h3>
