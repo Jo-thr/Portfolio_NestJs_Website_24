@@ -26,9 +26,6 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
   const locale = useParams()?.locale
   const pathname = usePathname()
 
-  console.log(urlSegments.slice(-1))
-  console.log(pathname)
-
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {

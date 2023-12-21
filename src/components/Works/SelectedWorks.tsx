@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Animation, { DelayType } from '../Animations/Animation'
-import FTVMOCKUP from '@public/img-projects/FTV-MOCKUP.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -102,10 +100,10 @@ const SelectedWorks = ({ data, className }: SelectedWorksProps) => {
               'relative flex h-full w-full items-center justify-center'
             }
           >
-            <div className={'relative z-10 h-5/6 w-full '}>
+            <div className={'relative z-10 aspect-video h-5/6 w-full '}>
               {contentSelectedWork?.imgFirst && (
                 <Image
-                  src={`https://www.jonathan-thr.com/_next/image?url=%2Fimg-projects%2FPARIS-SHOPPING-MOCKUP.png&w=3840&q=70`}
+                  src={contentSelectedWork.imgFirst}
                   alt={contentSelectedWork.imgFirst}
                   style={{ objectFit: 'contain' }}
                   fill
