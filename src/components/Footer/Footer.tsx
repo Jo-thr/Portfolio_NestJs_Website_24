@@ -32,7 +32,6 @@ export interface FooterProps {
 
 const Footer = ({ data }: FooterProps) => {
   const pathname = usePathname()
-  console.log(pathname)
   return (
     <footer className="relative z-50 flex flex-col items-center gap-40 rounded-t-3xl bg-teal-200 px-60 py-40 text-black-base">
       <div className="flex w-full flex-row justify-between text-lg font-light">
@@ -47,22 +46,21 @@ const Footer = ({ data }: FooterProps) => {
           <h3>{data.linksTitle}</h3>
           <div className="mt-14 grid grid-cols-2 gap-4 gap-x-20">
             {data.links.map((link) => (
-              <>
+              <div key={link.id}>
                 {pathname.includes(link.link) ? (
-                  <div key={link.id} className="relative text-teal-700/40">
+                  <div className="relative text-teal-700/40">
                     <div className="absolute -left-3 top-1/2 h-px w-full -rotate-2 bg-teal-700/40" />
                     {link.title}
                   </div>
                 ) : (
                   <Link
                     href={link.link}
-                    key={link.id}
                     className="font-medium text-teal-900/70"
                   >
                     {link.title}
                   </Link>
                 )}
-              </>
+              </div>
             ))}
           </div>
         </div>

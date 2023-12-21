@@ -11,7 +11,7 @@ const SkillsPage = async ({
   const dictionary = await getDictionary(locale)
   const data = dictionary.skillPage
   return (
-    <main className="relative mb-80 flex h-full w-full flex-col items-center justify-center ">
+    <main className="relative mb-80 flex h-full w-full flex-col items-center justify-center px-20 ">
       <Heading title={data.mainTitle} description={data.mainDesc} />
       <SkillListing data={data.listing} />
       <SkillsBlock data={data} />

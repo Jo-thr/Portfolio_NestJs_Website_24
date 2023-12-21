@@ -26,6 +26,9 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
   const locale = useParams()?.locale
   const pathname = usePathname()
 
+  console.log(urlSegments.slice(-1))
+  console.log(pathname)
+
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -80,7 +83,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
                 isOpen && 'opacity-10'
               } transform text-xl transition-all duration-500 ease-in-out`}
             >
-              {urlSegments}
+              {urlSegments.slice(-1)}
             </h5>
           </div>
           <div className="flex flex-row items-center justify-end gap-10">

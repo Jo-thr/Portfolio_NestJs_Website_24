@@ -165,11 +165,16 @@
   },
   "cvPage": {
     "mainTitle": "CV",
-    "mainDesc": "Fashion has always been a real subject for all eras, so why settle for just one cap?"
+    "mainDesc": "Fashion has always been a real subject for all eras, so why settle for just one cap?",
+    "descirption": "I'm a self-taught full-stack developer from France, primarily frontend focused on creating beautiful websites and interfaces. Whilst collaborating with startups, founders and early stage companies to thrive together whilst constantly learning. I'm looking for new experiences to grow both as a professional and as a human being."
   },
   "worksPage": {
     "mainTitle": "Selected works",
     "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!",
+    "tabs": {
+      "visual": "Visual",
+      "text": "Description"
+    },
     "projects": [
       {
         "id": 1,
@@ -306,7 +311,7 @@
         ]
       },
       {
-        "id": 7,
+        "id": 6,
         "slug": "one4you",
         "name": "One4You",
         "categorie": "Webdesign / Ui Project",

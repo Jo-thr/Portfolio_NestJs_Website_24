@@ -164,11 +164,16 @@
   },
   "cvPage": {
     "mainTitle": "CV",
-    "mainDesc": "La mode à toujours été un vrai sujet pour toutes les époques, alors pourquoi se contenter d'une seule casquette ?"
+    "mainDesc": "La mode à toujours été un vrai sujet pour toutes les époques, alors pourquoi se contenter d'une seule casquette ?",
+    "descirption": "Je suis un developpeur full-stack autodidacte de France, principalement tourné vers le frontend, qui se concentre sur la création de beaux sites web et d’interfaces. Tout en collaborant avec des startups, des fondateurs et des entreprises en phase de démarrage afin de prospérer ensemble tout en apprenant constamment. Je recherche de nouvelles expériences pour grandir à la fois en tant que professionnel et en tant qu'être humain."
   },
   "worksPage": {
     "mainTitle": "Sélection de travaux",
     "mainDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis odit culpa voluptatem, maxime hic libero rerum quam autem quis voluptatum! Quas quasi, voluptas ducimus quo impedit expedita temporibus suscipit accusantium aperiam repellat quod praesentium voluptatem sit velit, atque neque blanditiis, harum eaque repudiandae numquam perferendis esse? Deserunt aliquid laboriosam et minus, sequi doloribus numquam consequatur quis, exercitationem sunt eius magnam sit impedit tempore placeat!",
+    "tabs": {
+      "visual": "Visuel",
+      "text": "Description"
+    },
     "projects": [
       {
         "id": 1,
@@ -221,7 +226,7 @@
         ]
       },
       {
-        "id": 4,
+        "id": 3,
         "slug": "rexel",
         "name": "Rexel Expo",
         "categorie": "Projet Full-Stack",
@@ -248,7 +253,7 @@
         ]
       },
       {
-        "id": 5,
+        "id": 4,
         "slug": "wedigitalgarden",
         "name": "WeDigital Garden",
         "categorie": "Projet Full-Stack",
@@ -277,32 +282,7 @@
         ]
       },
       {
-        "id": 6,
-        "slug": "kerastase",
-        "name": "Kérastase",
-        "categorie": "Projet Front-End",
-
-        "short_description": "Depuis sa création, Kérastase ne cesse\nde surprendre et de satisfaire ses utilisateurs.",
-        "description": "Le soin est au cœur de la marque et cela va au-delà des produits : la marque prend soin de tous les types de cheveux, de toutes les femmes et aussi du monde qui nous entoure. Depuis 2015, Kérastase a su intégrer les problématiques de développement durable au sein de ses formules, ses packagings et les matériaux utilisés pour le merchandising.",
-
-        "imgBgColor": "bg-KERA.jpg",
-        "imgFirst": "KERASTASE-MOCKUP.png",
-
-        "poste": "Développeur Front-End",
-        "techno": "Vue.js, Tailwind",
-        "color": "#DF9993",
-
-        "mission": "Développement du nouveau site vitrine concernant la gamme Chroma Absolut destinée aux particuliers et aux professionnels. Ce site est consultable seulement en salon de coiffure. J’ai développé celle-ci en Vue.js accompagnée de Tailwinds. Pas de back-office à mettre en place.",
-
-        "projet": [
-          {
-            "img": "01-KERA.png",
-            "title": "Page consommateurs et professionnels"
-          }
-        ]
-      },
-      {
-        "id": 7,
+        "id": 5,
         "slug": "one4you",
         "name": "One4You",
         "categorie": "Projet Webdesign / Ui",

@@ -1,0 +1,68 @@
+.fixe {
+  animation-timing-function: ease-in-out;
+  transition: 0.2s;
+}
+
+.fromTop {
+  animation-name: fromTop;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+  transition: 0.2s;
+}
+
+.fromLeft {
+  animation-name: fromLeft;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+  transition: 0.2s;
+}
+
+.fromRight {
+  animation-name: fromRight;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+  transition: 0.2s;
+}
+
+.fromBottom {
+  animation-name: fromBottom;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+  transition: 0.2s;
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

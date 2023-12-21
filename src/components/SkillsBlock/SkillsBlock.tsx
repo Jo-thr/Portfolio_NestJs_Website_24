@@ -44,7 +44,7 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
   }
 
   return (
-    <div className="mt-40 w-full animate-appear px-60 opacity-0">
+    <div className="mt-40 w-full animate-appear px-20 opacity-0">
       <div className="mb-10 flex flex-row items-center gap-4">
         {data.tags.map((tag) => (
           <Tag
