@@ -31,7 +31,7 @@ const SelectedWorks = ({ data, className }: SelectedWorksProps) => {
   const [tabSelected, setTabSelected] = useState(1)
   const [workSelected, setWorkSelected] = useState(1)
 
-  const [selectedWorks, setSelectedWorks] = useState<ProjectsProps[]>([])
+  const [selectedWorks, setSelectedWorks] = useState<any[]>([])
 
   useEffect(() => {
     const newSelectedWorks = Array.from({ length: 3 }, (_, index) => {
@@ -56,7 +56,7 @@ const SelectedWorks = ({ data, className }: SelectedWorksProps) => {
         {selectedWorks.map((proj) => (
           <div
             key={proj.id}
-            className={`flex h-full w-full transform flex-row items-center justify-start gap-12 whitespace-nowrap font-koulen text-2xl font-bold tracking-tight text-white-dark/50 transition-all duration-500 ease-in-out hover:cursor-pointer ${
+            className={`flex h-full w-full transform flex-row items-center justify-start gap-12 whitespace-nowrap font-dm text-2xl font-bold tracking-tight text-white-dark/50 transition-all duration-500 ease-in-out hover:cursor-pointer ${
               workSelected === proj.id && 'text-7xl !text-white-base'
             }`}
             onClick={() => setWorkSelected(proj.id)}
@@ -124,7 +124,7 @@ const SelectedWorks = ({ data, className }: SelectedWorksProps) => {
         )}
         {tabSelected === 2 && (
           <div className="flex h-full w-full flex-col justify-center gap-8 bg-black-dark p-20">
-            <div className="font-koulen text-4xl font-bold uppercase ">
+            <div className="font-dm text-4xl font-bold uppercase ">
               {contentSelectedWork?.short_description}
             </div>
             <div className="w-2/3 text-lg">

@@ -9,12 +9,8 @@ const ContactPage = async ({
   const dictionary = await getDictionary(locale)
   const data = dictionary.contactPage
   return (
-    <div className="relative flex h-screen w-full items-center justify-center ">
-      <Heading
-        title={data.mainTitle}
-        description={data.mainDesc}
-        className="absolute top-10 px-20"
-      />
+    <div className="relative flex h-screen w-full items-center justify-center px-20 ">
+      <Heading title={data.mainTitle} description={data.mainDesc} />
     </div>
   )
 }

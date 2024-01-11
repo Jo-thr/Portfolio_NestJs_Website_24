@@ -44,8 +44,8 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
   }
 
   return (
-    <div className="mt-40 w-full animate-appear px-20 opacity-0">
-      <div className="mb-10 flex flex-row items-center gap-4">
+    <div className="mt-20 w-full animate-appear opacity-0">
+      <div className="flex flex-row items-center gap-4">
         {data.tags.map((tag) => (
           <Tag
             key={tag.id}
@@ -57,24 +57,22 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
           />
         ))}
       </div>
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        className={`relative grid w-full min-w-full grid-cols-6 items-center justify-center gap-20`}
+      <div
+        className={`relative mt-10 grid w-full min-w-full grid-cols-8 items-center justify-center gap-10`}
       >
         {(isSelected.length ? selectedSkills : favSkills).map((item) => (
-          <motion.div
-            variants={cardVariants}
+          <div
             key={item.id}
-            className={`flex aspect-square w-full flex-col gap-6 rounded-md border-4 border-teal-200  p-8 transition-all duration-500 ease-in-out hover:animate-pulse hover:bg-teal-300/5 `}
+            className={`group aspect-square w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5  transition-all duration-500 ease-in-out`}
           >
-            <p className="text-lg">{item.domain}</p>
-            <div className="h-1 w-full rounded-full bg-teal-100" />
-            <h3>{item.name}</h3>
-          </motion.div>
+            <div className="flex h-full w-full flex-col gap-4 rounded-md bg-[#000] p-6 group-hover:bg-teal-300/10">
+              <p className="text-sm font-light tracking-tight">{item.domain}</p>
+              <div className="h-1 w-full rounded-full bg-teal-100" />
+              <h3>{item.name}</h3>
+            </div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }

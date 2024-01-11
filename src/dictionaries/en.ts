@@ -5,6 +5,122 @@ import WDGImageFirst from '@public/projects/WDG-MOCKUP.png'
 import O4YImageFirst from '@public/projects/ONE4YOU-MOCKUP.png'
 
 const EN = {
+  home: {
+    aboutSection: {
+      about: {
+        subtitle: 'À propos',
+        title: 'Comment puis-je vous aider ?',
+        text: `Je suis développeur web Front-End spécialisé sur le langage de programmation React un langage qui permettra à votre projet d'être extrêmement rapide, et facilement maintenable, la recette idéale pour faire la différence de nos jours, sur tous les points de vue.
+      J'apprends et j'intègre les dernières technologies et techniques pour réduire le temps de chargement des pages web. J'utilise mes connaissances et mes outils pour gagner du temps de développement, notamment grâce à des pré-processeurs et avec l'aide de framework front-end personnalisé que j'utilise pour chaque nouveau projet.
+      De manière très générale, je suis le bon partenaire pour créer tous types de projets web, que ce soit la simple création d'un site internet à l'application web, cependant mon domaine de compétence encadre des projets se voulant "sur mesure" "connectés a d'autres services (API)" mais surtout "a la pointe de la technologie".`,
+      },
+      missions: [
+        {
+          title: 'Intégration web sur mesure',
+          text: 'Intégration web & mobile sur base de vos fichiers Figma, Sketch, InVison ou autres.',
+        },
+        {
+          title: 'Expérience utilisateur',
+          text: "Création de petites animations qui ajoutent de l'interactivité sur votre site.",
+        },
+        {
+          title: 'Architecture & composants',
+          text: "Utilisation d'une architecture moderne et modulable aux besoins de votre projet.",
+        },
+        {
+          title: 'Performances',
+          text: 'Test de la rapidité de votre site grâce à des outils comme Google PageSpeed.',
+        },
+        {
+          title: 'Accessibilité',
+          text: "Mise en place d'une série de bonnes pratiques définies par le label AnySurfer.",
+        },
+        {
+          title: 'Sémantique',
+          text: "Sémantique HTML aux normes du W3C et prévue pour l'optimisiation de votre SEO.",
+        },
+      ],
+      catchphrase:
+        "Mon travail est d'arriver à capter l'attention grâce à uneexpérience de navigationefficace et agréable !",
+    },
+    skillSection: {
+      subtitle: 'Compétences',
+      title: 'L’apprentissage s’effectue avec la curiosité et la passion',
+      tags: [
+        { id: '01', name: 'Tous' },
+        { id: '02', name: 'Back' },
+        { id: '03', name: 'CMS' },
+        { id: '04', name: 'Data' },
+        { id: '05', name: 'Design' },
+        { id: '06', name: 'Devops - CI/CD' },
+        { id: '07', name: 'Front' },
+        { id: '08', name: 'Outil' },
+      ],
+      skills: [
+        { id: '01', name: 'Axeptio', domain: 'Data', fav: false },
+        { id: '02', name: 'Contentful', domain: 'CMS', fav: true },
+        {
+          id: '03',
+          name: 'Docker',
+          domain: 'Devops - CI/CD',
+          fav: true,
+        },
+        { id: '04', name: 'Figma', domain: 'Design', fav: true },
+        {
+          id: '05',
+          name: 'GitHub GitLab',
+          domain: 'Devops - CI/CD',
+          fav: true,
+        },
+        {
+          id: '06',
+          name: 'Google Tag Manager',
+          domain: 'Data',
+          fav: false,
+        },
+        { id: '07', name: 'GraphQL', domain: 'Data', fav: false },
+        { id: '08', name: 'Gsap', domain: 'Front', fav: false },
+        { id: '09', name: 'Hubspot', domain: 'Data', fav: false },
+        { id: '10', name: 'Jira', domain: 'Outil', fav: false },
+        { id: '11', name: 'Laravel', domain: 'Back', fav: false },
+        { id: '12', name: 'Miro', domain: 'Outil', fav: false },
+        { id: '13', name: 'Node.js', domain: 'Back', fav: false },
+        {
+          id: '14',
+          name: 'Netlify',
+          domain: 'Devops - CI/CD',
+          fav: true,
+        },
+        { id: '15', name: 'Next.js', domain: 'Front', fav: true },
+        { id: '16', name: 'Notion', domain: 'Outil', fav: false },
+        { id: '17', name: 'Nuxt.js', domain: 'Front', fav: false },
+        { id: '18', name: 'Payload', domain: 'CMS', fav: true },
+        { id: '19', name: 'React.js', domain: 'Front', fav: true },
+        { id: '20', name: 'Sass', domain: 'Front', fav: false },
+        { id: '21', name: 'Slack', domain: 'Outil', fav: false },
+        { id: '22', name: 'SQL', domain: 'Data', fav: true },
+        { id: '23', name: 'Storyblok', domain: 'CMS', fav: false },
+        { id: '24', name: 'Storybook', domain: 'Front', fav: false },
+        { id: '25', name: 'Strapi', domain: 'CMS', fav: true },
+        { id: '26', name: 'Suite Adobe', domain: 'Design', fav: true },
+        { id: '27', name: 'Tailwind', domain: 'Front', fav: true },
+        { id: '28', name: 'Teams', domain: 'Outil', fav: false },
+        { id: '29', name: 'Trello', domain: 'Outil', fav: false },
+        { id: '30', name: 'Typescript', domain: 'Front', fav: true },
+        {
+          id: '31',
+          name: 'Vercel',
+          domain: 'Devops - CI/CD',
+          fav: false,
+        },
+        { id: '32', name: 'Vue.js', domain: 'Front', fav: true },
+      ],
+    },
+    projectSection: {
+      subtitle: 'Selection de travaux',
+      title: "Rien de mieux qu'un tour d'horizon",
+    },
+  },
   summary: [
     {
       id: '01',

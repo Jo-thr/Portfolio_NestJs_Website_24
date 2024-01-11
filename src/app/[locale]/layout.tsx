@@ -1,20 +1,35 @@
 import '@/assets/globals.css'
 import { i18n } from '@/i18n-config'
 import type { Metadata } from 'next'
-import { Koulen } from 'next/font/google'
+import { Allison, DM_Serif_Display, Poppins } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
 import { getDictionary } from '@/hooks/getDictionary'
 import Gradient from '@/components/Gradient/Gradient'
 import Footer from '@/components/Footer/Footer'
+import Link from 'next/link'
+import Image from 'next/image'
+import MinLogo from '@public/images/LOGO-POINT.svg'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-const koulen = Koulen({
+const dm = DM_Serif_Display({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-koulen',
+  variable: '--font-dm-serif',
+})
+
+const allison = Allison({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-allison',
+})
+
+const poppins = Poppins({
+  weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
 })
 
 export default async function RootLayout({
@@ -28,8 +43,14 @@ export default async function RootLayout({
   return (
     <html lang={params.locale}>
       <body
-        className={`min-h-screen min-w-full overflow-visible ${koulen.variable}`}
+        className={`min-h-screen min-w-full overflow-visible ${dm.variable} ${allison.variable} ${poppins.variable}`}
       >
+        <Link
+          href={`/${params.locale}`}
+          className="fixed top-[5vh] left-[3vw] z-50 w-[94vw] "
+        >
+          <Image src={MinLogo} alt={'Logo'} className="max-w-[2rem]" />
+        </Link>
         {children}
         <Navbar dataSummary={dictionary.summary} />
         <Gradient />
