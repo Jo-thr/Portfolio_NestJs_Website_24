@@ -1,10 +1,9 @@
-import { Locale } from '../../i18n-config'
-import { getDictionary } from '@/hooks/getDictionary'
 import HomeSection from '@/components/Section/HomeSection'
 import Section from '@/components/Section/Section'
-import SkillListing from '@/components/SkillsListing/SkillListing'
 import SkillsBlock from '@/components/SkillsBlock/SkillsBlock'
 import Works from '@/components/Works/works'
+import { getDictionary } from '@/hooks/getDictionary'
+import { Locale } from '../../i18n-config'
 
 export default async function Home({
   params: { locale },

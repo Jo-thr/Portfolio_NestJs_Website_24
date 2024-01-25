@@ -40,6 +40,7 @@ module.exports = {
         appear: 'appear 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards',
         deappear: 'deappear 0.5s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards',
         reveal: 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+        'reveal-tb': 'revealtb 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
       },
       keyframes: {
         'text-reveal': {
@@ -62,6 +63,10 @@ module.exports = {
         },
         reveal: {
           from: { transform: 'translate(0, 110%)', opacity: 0 },
+          to: { transform: 'translate(0, 0)', opacity: 1 },
+        },
+        revealtb: {
+          from: { transform: 'translate(0, -110%)', opacity: 0 },
           to: { transform: 'translate(0, 0)', opacity: 1 },
         },
         deappear: {

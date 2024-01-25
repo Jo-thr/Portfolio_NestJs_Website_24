@@ -1,13 +1,4 @@
-import FTVImageFirst from '@public/projects/FTV-MOCKUP.png'
-import LogoFTV from '@public/projects/LogoFTVLab.png'
-import PPSImageFirst from '@public/projects/PARIS-SHOPPING-MOCKUP.png'
-import LogoPPS from '@public/projects/LogoParisShopping.png'
-import REXELImageFirst from '@public/projects/REXEL-MOCKUP.png'
-import LogoRexel from '@public/projects/LogoRexel.png'
-import WDGImageFirst from '@public/projects/WDG-MOCKUP.png'
-import LogoWDG from '@public/projects/LogoWDG.png'
-import O4YImageFirst from '@public/projects/ONE4YOU-MOCKUP.png'
-import LogoO4Y from '@public/projects/LogoO4Y.png'
+import { Media } from './media'
 
 const FR = {
   home: {
@@ -313,154 +304,284 @@ const FR = {
     },
     urlPublicImage: '/projects/',
     projects: [
+      // FTV
       {
         id: 1,
         slug: 'francetv',
         name: 'France TV Lab',
-        categorie: 'Projet Front-End',
 
+        poste: 'Developpeur Front-end',
+        year: '2021-2022',
+        site: 'https://www.francetvlab.fr',
+        techno: {
+          front: 'Nuxt.Js, TailwindCss',
+          back: 'Laravel 7, Laravel Nova',
+          data: 'GraphQL',
+          devops: 'Gitlab CI, Docker',
+          tools: 'GitLab, Figma, Miro, Jira',
+        },
+
+        mission: `
+        • Réalisation d'un front-end afin d'afficher un contenu de blog dynamiquement. (Nuxt.Js / TailwindCss)
+        • Restructuration et administration d'un backend et de ressources clé en main pour le client. (Laravel Nova)
+        • Intégration entière comprenant un critère d'accessibilité très élevé.
+    `,
         short_description:
           "Tout le monde connais France TV,\nmais qu'est-ce France TV Lab ?",
-        description:
-          "Le Lab de FTV est le blog dédié à l’innovation de France Télévision. C’est une plateforme collaborative, avec une administration simplifiée, développée et déployée en 3 mois. Pour servir son positionnement stratégique dans un contexte de fusion de France Télévisions et de Radio France, France TV a souhaité refondre sa plateforme d’innovation.\nLe projet a été mené en mode agile dans un contexte de besoin métier mature et un engagement fort en termes de périmètre/timing.\nLa réussite de ce projet a conduit FTV info à confier deux autres projets de plus grandes ampleur à des équipes Wizards Technologies. Ainsi, nous avons rénové l'application dans le but de la rendre plus légère, dynamique et performante.",
+        description: `France Télévisions est une société nationale de programme qui gère les activités de la télévision publique en France, de la production à la diffusion. Le Lab est une entité de France Télévisions Publicité qui regroupe depuis 3 ans plusieurs expertises : Le parrainage & programmes courts, les opérations spéciales. Ce département permet aux partenaires agences et annonceurs de prendre la parole différemment autour des piliers fondateurs de la marque que sont la télévision et le digital.
+          Leur besoin de créer un site web pour y partager leurs prises de parole, de partager d'articles, etc... est donc devenu notre mission !`,
+        contribution: `Mise en place d'une stack frontend en Nuxt.Js et TailwindCss, couvrant toutes les exigences Ui du projet. Création de pages dynamique avec une structure commune afin de pouvoir administrer des articles que possible sans avoir à solliciter l'intervention d'un développeur. Accent mis sur l'accessibilité qui était un enjeux clé du client. Restructuration du backend pour la création de nouveaux contenus basé sur un contenu fourni par le client dans Miro. J'ai défini des types et structures de pages pour un déploiement efficace des contenus.
+        Discussions quotidiennes avec l'équipe et le client pour suivre ce qui est réaliser, bloquants ou en progression. `,
 
-        imgBgColor: 'bg-FTV.jpg',
-        imgFirst: FTVImageFirst,
-        logo: LogoFTV,
-        poste: 'Developpeur Front-end',
-        techno: 'Nuxt.js, Tailwind, Laravel 7, Docker',
-        color: '#0123FF',
-        site: 'https://www.francetvlab.fr',
-
-        mission:
-          "Refondre le site de France TV Lab plus intuitive, correspondant à de nombreux critères d'accessibilités et de vidéos interactives (leur domaine). Utilisation du framework Vue.js accompagné de tailwinds pour le front et de Laravel Nova pour le back.",
+        img: {
+          color: '#0123FF',
+          logo: Media.FTV.logo,
+          cover: Media.FTV.IF,
+        },
 
         projet: [
-          { img: '01-FTV.png', title: 'Page catégories' },
-          { img: '02-FTV.png', title: 'Page article' },
+          { img: Media.FTV.proj[0], title: 'Page catégories' },
+          { img: Media.FTV.proj[1], title: 'Page article' },
         ],
       },
+      // LSDA
       {
         id: 2,
-        slug: 'parisshopping',
-        name: 'Paris Shopping',
-        categorie: 'Projet Webdesign / Ui',
+        slug: 'lesitedelauto',
+        name: "Le Site de l'Auto",
 
+        poste: 'Développeur FullStack',
+        site: 'https://www.lesitedelauto.fr/',
+        year: '2023',
+        techno: {
+          front: 'Next.Js, TailwindCss, TypeScript',
+          back: 'PayloadCMS',
+          data: 'GraphQL',
+          devops: 'Gitlab CI, Docker',
+          tools: 'GitLab, Figma, Notion, GoogleTag Manager',
+        },
+
+        mission: `
+        • Réalisation d'un front-end afin d'afficher un contenu de site vitrine dynamique sans nécessité une interventions d'un développeur. (NextJs / TailwindCss / TypeScript)
+        • Créatoin et administration d'un backend et de ressources clé en main pour le client (PayloadCms / GraphQL / API AutoScout24)
+        • Intégration d'un gestionnaire de cookies afin d'obtenir une data au plus juste pour chaque utilisateur. (GoogleTagManager / Tarte au citron / Hotjar )
+        `,
         short_description:
           'Le e-shop qui référence uniquement\nles boutiques parisiennes indépendantes.',
         description:
           'Paris.Shopping met à l’honneur les meilleures boutiques et marques parisiennes, et propose chaque semaine LA sélection des produits préférés des Parisiens : les plus stylés, les plus tendances, les plus so chic, bref… les plus parisiens. Pour que chacun, qu’ils viennent en voisin ou depuis l’autre bout du monde, puisse accéder aux meilleures adresses de shopping. Et à l’esprit de Paris.',
+        contribution:
+          "J'ai mis en place une stack technique intégrale s'articulant autour d'un backend structuré et une gestion d'API. J'y ai créé des contenus afin d'enrichir leurs différentes pages. J'ai aussi intégré des outils de tracking, gestion de cookies et des formulaires. Concernant le frontend, j'ai intégré l'intégralité des contenus très orienté ecommerce afin de partager efficacement leurs annonces véhicules, leurs connaissances et leurs courtiers, le tout articulé autour de maquettes figma. Discussions quotidiennes avec l'équipe pour respecter les guidelines UI et le suivi d'intégration.",
 
-        imgBgColor: 'bg-PPS.jpg',
-        imgFirst: PPSImageFirst,
-        logo: LogoPPS,
-        poste: 'Directeur Artistique',
-        techno: 'Magento II, Suite Adobe',
-        color: '#F04249',
-
-        mission:
-          'Création de toute l’identité visuelle de Paris.shopping, élaboration d’une charte graphique pour ensuite créer tous les supports nécessaires. Création de supports print (carte de visite, présentations commerciales, packaging d’envoi, ..) et de supports web (maquettes et développement du site e-commerce, emailing, support de contact, vidéo, réseaux sociaux).',
+        img: {
+          color: '#E0FC52',
+          logo: Media.LSDA.logo,
+          cover: Media.LSDA.IF,
+        },
 
         projet: [
-          { img: '01-PPS.png', title: "Page d'accueil" },
-          { img: '02-PPS.png', title: 'Page article et boutique' },
-          { img: '03-PPS.png', title: 'Page produit' },
-          { img: '04-PPS.png', title: 'Page à propos et panier' },
-          { img: '05-PPS.png', title: 'Mail de commande' },
+          { id: '1', img: Media.LSDA.proj[0], title: "Page d'accueil" },
+          { id: '2', img: Media.LSDA.proj[3], title: 'Page à propos' },
+          { id: '3', img: Media.LSDA.proj[4], title: 'Page contrôle' },
+          { id: '4', img: Media.LSDA.proj[1], title: 'Page recherche' },
+          { id: '5', img: Media.LSDA.proj[2], title: 'Page produit' },
+          { id: '6', img: Media.LSDA.proj[5], title: 'Page équipe' },
+          { id: '7', img: Media.LSDA.proj[6], title: 'Page clients livrés' },
         ],
       },
+      // PPS
       {
         id: 3,
-        slug: 'rexel',
-        name: 'Rexel Expo',
-        categorie: 'Projet Full-Stack',
+        slug: 'parisshopping',
+        name: 'Paris Shopping',
 
+        poste: 'Directeur Artistique',
+        year: '2016-2018',
+        techno: {
+          back: 'Magento 2, Wordpress',
+          tools: 'Slack, Trello, Suite Adobe',
+        },
+
+        mission: `
+        • Supports de communication print et web | Animation du site vitrine, Application mobile, Affiches, Brochures, Photographies, PLV, Newsletters, Blog.
+        • Univers graphiques | Charte graphique, typographies, photographies, cahiers de tendances de l’agence (Couleurs, Femme, Homme, Déco, Lifestyle, . . .)
+    `,
         short_description:
-          "Expert de la distribution multicanale pour le monde de l'énergie.",
-        description:
-          'Expert mondial de la distribution professionnelle multicanale de produits et services pour le monde de l’énergie. L’offre du Groupe recouvre une large gamme de produits, de solutions et de services durables et innovants dans les domaines des équipements techniques, des automatismes et de la gestion de l’énergie pour la construction, la rénovation, la maintenance et la production.',
+          'Le e-shop qui référence uniquement\nles boutiques parisiennes indépendantes.',
+        description: `Paris.Shopping met à l’honneur les meilleures boutiques et marques parisiennes, et propose chaque semaine LA sélection des produits préférés des Parisiens : les plus stylés, les plus tendances, les plus so chic, bref… les plus parisiens. Pour que chacun, qu’ils viennent en voisin ou depuis l’autre bout du monde, puisse accéder aux meilleures adresses de shopping. Et à l’esprit de Paris. La marque offrait une visibilité et un accès au monde du e-commerce sans que le commençant n'est à le gérer. Paris.Shopping gère le contenu et la transaction, le marchant lui s'occupe du stock et de la livraison des produits.`,
+        contribution: `Donner l’impulsion créative aux différents projets, tout en organisant la production, ses urgences et ses imprévus. Je veillais à la grande qualité du travail graphique ainsi qu’aux produits finis, à l’élaboration et à la création. `,
 
-        imgBgColor: 'bg-REXEL.jpg',
-        imgFirst: REXELImageFirst,
-        logo: LogoRexel,
-        poste: 'Développeur Full-Stack',
-        techno: 'Next.js, Tailwind, Netlify',
-        color: '#00448c',
-
-        mission:
-          "Demande atypique, le client souhaitait pour son prochain salon d'exposition, un site au décor de western, qui plus est, à l'alure d'un site web mais sur présenté sur une borne format mobile... challenge ! J'ai donc commencé à initialiser le projet avec du Next.js et du tailwindCss, puis j'ai scrappé certaines catégories produits directement sur leur e-commerce, et simulé un tunnel d'achat avec confirmation de celle-ci.",
+        img: {
+          color: '#F04249',
+          logo: Media.PPS.logo,
+          cover: Media.PPS.IF,
+        },
 
         projet: [
-          { img: '01-REXEL.png', title: "Page d'accueil" },
-          { img: '02-REXEL.png', title: 'Page Outils' },
-          { img: '03-REXEL.png', title: 'Page Catalogue' },
-          { img: '04-REXEL.png', title: 'Page Produit' },
-          { img: '05-REXEL.png', title: 'Page Panier' },
-          { img: '06-REXEL.png', title: 'Page Confirmation panier' },
+          { img: Media.PPS.proj[0], title: "Page d'accueil" },
+          { img: Media.PPS.proj[1], title: 'Page article' },
+          { img: Media.PPS.proj[2], title: 'Page boutique' },
+          { img: Media.PPS.proj[3], title: 'Page produit' },
+          { img: Media.PPS.proj[4], title: 'Page à propos' },
         ],
       },
+      // REXEL
       {
         id: 4,
-        slug: 'wedigitalgarden',
-        name: 'WeDigital Garden',
-        categorie: 'Projet Full-Stack',
+        slug: 'rexel',
+        name: 'Rexel Expo',
 
+        poste: 'Développeur FullStack',
+        year: '2022',
+        techno: {
+          front: 'Next.Js, TailwindCss, TypeScript',
+          devops: 'Gitlab CI, Vercel',
+          tools: 'GitLab, Figma, Notion',
+        },
+
+        mission: `
+        • Réalisation d'un front-end afin de mettre en avant tous le processus d'achat, le catalogue produits et mise en avant produits (Next.Js, TailwindCss)
+        • Création de maquettes et d'un kit Ui complet qui correspond aux besoins visuels du client et au bon développement de l'application web (Figma / Notion)
+    `,
         short_description:
-          "Un studio de réalisation green et responsable\nqui s'engage auprès de ses clients.",
-        description:
-          "Studio de réalisation qui s'engage auprès de ses clients à créer un impact business, à améliorer leur pertinence en réinventant leurs offres ou core business model et à délivrer plus rapidement de la valeur par la mise en place d’équipes et de méthodes cross-disciplinaires.",
+          "Expert de la distribution multicanale pour le monde de l'énergie.",
+        description: `Rexel est un groupe français actif dans la distribution de matériel électrique, de chauffage, d'éclairage mais aussi dans les énergies renouvelables et les produits et services d'efficacité énergétique, l'habitat connecté, et les services comme la location d'outillage portatif ou des suites logicielles à destination des professionnels.
+          Voulant présenter leurs innovations de e-shopping, Rexel nous à commandité le développement de leur site e-commerce qui mettrons en avant pour leurs clients BtoB et BtoC sur la gestion de produits, interface de commandes, recherches produits, processus d'achat, etc... sur leur site internet.`,
+        contribution: `Création d'une charte graphique et d'un kit Ui complet prenant en considération les retours clients sur le besoins, l'esthétique et l'articulation des pages. J'ai aussi réalisé la totalité de l'intégration du site e-commerce avec catalogue, tunnel d'achat et pages spécifiques à Rexel. J'ai par ailleurs scrapé tous leurs produits et catégories de produits afin d'obtenir un catalogue riche de propositions.
+        Ainsi, quotidiennement nous organisions des discussions avec l'équipe et le client pour garder un oeil sur ce qui est réaliser, bloquants ou en progression.`,
 
-        imgBgColor: 'bg-WDG.jpg',
-        imgFirst: WDGImageFirst,
-        logo: LogoWDG,
-        poste: 'Developpeur Full-Stack',
-        techno: 'Nuxt.js, Tailwind, Laravel 7',
-        site: 'https://wedigital.garden',
-        color: '#36A364',
-
-        mission:
-          'Refondre le site de WeDigital.Garden avec l’utilisation du framework Vue.js accompagné de tailwinds pour le front et de Laravel Nova pour le back-office pour l’ajout de nouvelles fonctionnalités, création de nouvelles pages du site ainsi que la gestion du changement de langue.',
+        img: {
+          color: '#00448c',
+          logo: Media.REXEL.logo,
+          cover: Media.REXEL.IF,
+        },
 
         projet: [
-          { img: '01-WDG.png', title: "Page d'Acceuil" },
-          { img: '02-WDG.png', title: 'Page Méthodes' },
-          { img: '03-WDG.png', title: 'Page Équipe' },
-          { img: '04-WDG.png', title: 'Page Culture' },
-          { img: '05-WDG.png', title: 'Page Projets' },
-          { img: '06-WDG.png', title: 'Page Projet Détaillé' },
-          { img: '07-WDG.png', title: 'Page Mentions Légales' },
+          { img: Media.REXEL.proj[0], title: "Page d'accueil" },
+          { img: Media.REXEL.proj[1], title: 'Page Outils' },
+          { img: Media.REXEL.proj[2], title: 'Page Produit' },
+          { img: Media.REXEL.proj[3], title: 'Page Panier' },
+          { img: Media.REXEL.proj[4], title: 'Page Confirmation panier' },
         ],
       },
+      // ONE4YOU
       {
         id: 5,
         slug: 'one4you',
         name: 'One4You',
-        categorie: 'Projet Webdesign / Ui',
 
+        poste: 'Responsable Artistique',
+        year: '2018-2021',
+        site: 'https://www.one4you.com',
+        techno: {
+          front: 'Bootstrap',
+          back: 'Prestashop',
+          tools: 'Trello, Figma, Slack, AB Tasty',
+        },
+
+        mission: `
+          • Développement de modules, mise en production, création de composants frontend et gestion du backoffice sur Prestashop
+          • Univers graphiques | Charte graphique, Web design, Ux/Ui, visuels produits, photographies, . . .
+          • Supports de communication print et web | Animation site e-commerce, affiches, packaging, newsletters, stocks produits, gestion clients, transactions, catalogue produits, AB Tasty, . . .)
+      `,
         short_description:
           'Faites vos achats en ligne, et recevez \nune partie en cashback, facile non ?',
-        description:
-          "En charge de la gestion globale de l’identité visuelle de One4You. J'assure la cohérence et construis l’image de One4You, la fait évoluer dans le respect des contraintes économiques et des objectifs stratégiques et commerciaux définis par la direction générale. Je conçois et coordonne l’ensemble des supports qui véhiculent l’identité visuelle de One4You, ainsi que des marques, enseignes et jeunes talents qui lui sont rattachés.",
+        description: `One4You est un site ecommerce référençant un large panel de marques, sauf que sur ce site, on n'achète pas en euros, mais en Ones. Se basant sur la fidélité des clients, à chaque achat, ils reversent sous forme de "ones" du cashback pour récompenser le client. Qu'il peux ensuite réutiliser sur n'importe quelle autre marque partenaire. `,
+        contribution: `En charge de l’identité visuelle de One4You, j’assure la cohérence et construis son image de marque, la fait évoluer dans le respect des contraintes économiques, des objectifs stratégiques et commerciaux définit par la direction.
+        Je conçois et coordonne les différents supports qui véhiculent cette identité et enrichis son catalogue marques. `,
 
-        imgBgColor: 'bg-O4Y.jpg',
-        imgFirst: O4YImageFirst,
-        logo: LogoO4Y,
-        poste: 'Responsable Artistique',
-        techno: 'Prestashop, Adobe Suite, AB Tasty',
-        site: 'https://www.one4you.com',
-        color: '#00e6c2',
-
-        mission:
-          'Création de toute l’identité visuelle de One4You, élaboration d’une charte graphique pour ensuite créer tous les supports nécessaires. Création de supports print (carte de visite, présentations commerciales, packaging, ..) et de supports web (maquettes et développement du site e-commerce, emailing, support de contact, vidéo, réseaux sociaux).',
+        img: {
+          color: '#00e6c2',
+          logo: Media.O4Y.logo,
+          cover: Media.O4Y.IF,
+        },
 
         projet: [
-          { img: '01-O4Y.png', title: "Page d'accueil" },
-          { img: '02-O4Y.png', title: 'Page catalogue' },
-          { img: '03-O4Y.png', title: 'Page produit' },
-          { img: '04-O4Y.png', title: 'Page compte' },
-          { img: '05-O4Y.png', title: 'Page commande' },
+          { img: Media.O4Y.proj[0], title: "Page d'accueil" },
+          { img: Media.O4Y.proj[1], title: 'Page catalogue' },
+          { img: Media.O4Y.proj[2], title: 'Page produit' },
+          { img: Media.O4Y.proj[3], title: 'Page compte' },
+          { img: Media.O4Y.proj[4], title: 'Page commande' },
         ],
       },
+      // WDG
+      {
+        id: 6,
+        slug: 'wedigitalgarden',
+        name: 'WeDigital Garden',
+
+        poste: 'Developpeur FullStack',
+        year: '2021',
+        site: 'https://wedigital.garden',
+        techno: {
+          front: 'Nuxt.Js, TailwindCss, Vue.Js',
+          back: 'Laravel Nova',
+          data: 'GraphQL',
+          devops: 'Gitlab CI, Docker',
+          tools: 'GitLab, Figma, Axeptio, Hubspot GoogleTag Manager',
+        },
+
+        mission: `
+          • Réalisation d'un front-end afin d'afficher un contenu de site vitrine dynamiquement sans nécessite une interventions d'un développeur. (Next.Js / TailwindCss / TypeScript)
+          • Création et administration d'un backend et de ressources clé en main pour le client. (Laravel Nova)
+          • Intégration d'un CRM ainsi qu'un tracking plan complexe pour surveiller les besoins utilisateurs et y répondre le plus juste possible. (Hubspot/ Axeptio / GooleTag Manager)
+      `,
+        short_description:
+          "Un studio de réalisation green et responsable\nqui s'engage auprès de ses clients.",
+        description: `WeDigitalGarden, studio de réalisation qui s'engage auprès de ses clients à créer un impact business et utilisateur mesurable. Aider leurs clients à améliorer leur pertinence en réinventant leurs offres ou core business model et à délivrer plus rapidement de la valeur par la mise en place d’équipes et de méthodes cross-disciplinaires.
+          Le besoin de WeDigitalGarden était de réinventer leur approche au travers leur site vitrine, c'est pourquoi ils ont voulu refondre la totalité de leur site vitrine. `,
+        contribution: `J'ai mis en place une stack technique intégrale s'articulant autour d'un backend structuré et une gestion d'API. J'y ai créé des content afin de publier leurs projets, mettre en ligne leurs clients. J'ai aussi intégré des outils de tracking, gestion de cookieset des formulaires.
+        Concernant le frontend, j'ai intégré l'intégralité des contenus très orienté blog afin de partager efficacement leurs projets, leurs connaissances et leurs profils, le tout articulé autour de maquettes figma. Discussions quotidiennes avec l'équipe pour respecter les guidelines UI et le suivi d'intégration.`,
+
+        img: {
+          color: '#36A364',
+          logo: Media.WDG.logo,
+          cover: Media.WDG.IF,
+        },
+
+        projet: [
+          { img: Media.WDG.proj[0], title: "Page d'Acceuil" },
+          { img: Media.WDG.proj[1], title: 'Page Méthodes' },
+          { img: Media.WDG.proj[2], title: 'Page Équipe' },
+          { img: Media.WDG.proj[4], title: 'Page Projets' },
+          { img: Media.WDG.proj[5], title: 'Page Projet Détaillé' },
+          { img: Media.WDG.proj[3], title: 'Page Culture' },
+          { img: Media.WDG.proj[6], title: 'Page Mentions Légales' },
+        ],
+      },
+      // AXA
+      // {
+      //   id: 7,
+      //   slug: 'axagogreen',
+      //   name: 'Axa GoGreen',
+      //   categorie: 'Full-Stack Project',
+
+      //   short_description:
+      //     'GoGreen help you make informed choices\nabout improving the energy efficiency of your home.',
+      //   description:
+      //     'GoGreen has been created to help you make informed choices about improving the energy efficiency of your home. There are lots of options open to you and this website explains them all – from solar power and insulation, to heat pumps and deep retrofits. They can all bring you significant energy savings, while adding to the value of your property.\nWe also show you how to fund your home improvements, both through grants provided by the Irish Government, and low-interest green loans. And importantly, we provide a directory of trusted partners that can carry out the work for you.\nGo Green has been created by AXA, one of Ireland’s leading insurance companies. When you feel protected by AXA, you can go further.',
+
+      //   imgBgColor: 'bg-AGG.jpg',
+      //   imgFirst: 'AGG-MOCKUP.png',
+
+      //   poste: 'Full-Stack Developer',
+      //   techno:
+      //     'Next.js, Tailwind, Contentful, Netlify, Hubspot, SonarQube, Axeptio',
+      //   color: '#A3DFC6',
+
+      //   mission:
+      //     'Create a site from scratch, I initiated the project in Next.Js, implemented all desired libraries. The client chose Axeptio for the cookie management, Hubspot for the forms. In close collaboration with the Ui designers, I quickly integrated all the pages to then leave room for the connection with Contentful for a dynamic content created by the client. Project still in progress.',
+
+      //   projet: [
+      //     { img: '01-AGG.png', title: 'Home Page' },
+      //     { img: '02-AGG.png', title: 'Build Your Knowledge Page' },
+      //     { img: '03-AGG.png', title: 'Discover Your Options Page' },
+      //     { img: '04-AGG.png', title: 'Fund & Protect Page' },
+      //     { img: '05-AGG.png', title: 'Find Your Partner Page' },
+      //     { img: '06-AGG.png', title: 'FAQs Page' },
+      //     { img: '07-AGG.png', title: 'FAQ Page' },
+      //   ],
+      // },
     ],
   },
   rsPage: {
