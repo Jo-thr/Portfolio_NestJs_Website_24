@@ -1,18 +1,19 @@
 'use client'
+import Button from '@/components/Button/Button'
+import { IconType } from '@/components/Icons/Icons'
+import Switcher from '@/components/Switcher/Switcher'
+import MinLogo from '@public/images/LOGO-POINT.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   useParams,
   usePathname,
   useSelectedLayoutSegments,
 } from 'next/navigation'
-import MinLogo from '@public/images/LOGO-POINT.svg'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { IconType } from '@/components/Icons/Icons'
-import Button from '@/components/Button/Button'
-import Switcher from '@/components/Switcher/Switcher'
 
 export interface NavbarProps {
+  content: any
   dataSummary: {
     id: string
     title: string
@@ -20,7 +21,7 @@ export interface NavbarProps {
   }[]
 }
 
-const Navbar = ({ dataSummary }: NavbarProps) => {
+const Navbar = ({ dataSummary, content }: NavbarProps) => {
   const urlSegments = useSelectedLayoutSegments()
 
   const locale = useParams()?.locale
@@ -64,7 +65,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
             isOpen ? 'opacity-100 ' : 'opacity-0'
           } text-white-lighten absolute left-1/2 z-40 -mt-10 w-max translate-x-[-50%] font-allison tracking-widest transition-opacity delay-150 duration-500`}
         >
-          - Menu -
+          - {content.menu} -
         </div>
         <div className="relative flex flex-row items-center justify-between p-2">
           <div className="ml-3 flex flex-row items-center justify-start gap-4">
@@ -86,7 +87,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
               } relative transform transition-all duration-500 ease-in-out`}
             />
             <Button
-              title={isOpen ? 'FERMER' : 'MENU'}
+              title={isOpen ? content.close : content.menu}
               icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
               onClick={handleMenu}
               className={

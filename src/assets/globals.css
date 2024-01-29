@@ -26,3 +26,7 @@ h2 {
 h3 {
   @apply font-dm text-2xl;
 }
+
+p {
+  @apply whitespace-pre-line font-poppins font-thin tracking-wider;
+}

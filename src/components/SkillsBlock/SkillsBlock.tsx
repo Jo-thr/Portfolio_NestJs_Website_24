@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
 import Tag from '@/components/Tag/Tag'
-import { motion, Variants } from 'framer-motion'
+import { useState } from 'react'
 
 export interface SkillsBlockProps {
   data: {
@@ -29,20 +28,6 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
       ? data.skills.filter((skill) => skill.domain === isSelected)
       : data.skills
 
-  const cardVariants: Variants = {
-    offscreen: {
-      y: 300,
-    },
-    onscreen: {
-      y: 50,
-      transition: {
-        type: 'spring',
-        bounce: 0,
-        duration: 0.8,
-      },
-    },
-  }
-
   return (
     <div className="mt-20 w-full animate-appear opacity-0">
       <div className="flex flex-row items-center gap-4">
@@ -66,7 +51,7 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
             className={`group aspect-square w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5  transition-all duration-500 ease-in-out`}
           >
             <div className="flex h-full w-full flex-col gap-4 rounded-md bg-[#000] p-6 group-hover:bg-teal-300/10">
-              <p className="text-sm font-light tracking-tight">{item.domain}</p>
+              <p className="text-sm">{item.domain}</p>
               <div className="h-1 w-full rounded-full bg-teal-100" />
               <h3>{item.name}</h3>
             </div>

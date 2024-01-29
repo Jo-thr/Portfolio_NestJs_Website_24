@@ -5,50 +5,40 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Button from '../Button/Button'
 
-export type ProjectsProps = {
-  id: number
-  slug: string
-  name: string
-
-  poste: string
-  year: string
-  site: string
-  techno: string
-
-  mission: string
-  short_description: string
-  description: string
-  contribution: string
-
-  img: {
-    color: string
-    logo: string
-    cover: string
-  }
-
-  projet: {
-    id: string
-    img: string
-    title: string
-  }[]
-}[]
-
 export type WorksProps = {
-  data: {
-    mainTitle: string
-    mainDesc: string
-    tabs: {
-      visual: string
-      text: string
+  content: any
+  projects: {
+    id: number
+    slug: string
+    name: string
+
+    poste: string
+    year: string
+    site: string
+    techno: {
+      front: string
+      back: string
+      data: string
+      devops: string
+      tools: string
     }
-    projects: ProjectsProps
-  }
+    mission: string
+    short_description: string
+    description: string
+    contribution: string
+
+    img: {
+      color: string
+      logo: string
+      cover: string
+    }
+  }[]
   className?: string
 }
 
-const Works = ({ data, className }: WorksProps) => {
+const Works = ({ projects, content, className }: WorksProps) => {
   const [workSelected, setWorkSelected] = useState(1)
-  const totalProjects = data.projects.length
+  const totalProjects = projects.length
 
   const handleLeftArrowClick = () => {
     setWorkSelected((prev) => (prev === 1 ? totalProjects : prev - 1))
@@ -64,7 +54,7 @@ const Works = ({ data, className }: WorksProps) => {
 
   return (
     <>
-      {data.projects.map((proj) => (
+      {projects.map((proj) => (
         <div
           key={proj.id}
           className={`relative z-20 mt-20 flex h-full w-full flex-row ${className} ${
@@ -73,7 +63,7 @@ const Works = ({ data, className }: WorksProps) => {
         >
           <ArrowLeftCircle
             onClick={handleLeftArrowClick}
-            className="absolute -left-12 top-1/2 z-30 h-8 w-8 stroke-black-light  hover:cursor-pointer"
+            className="absolute -left-12 top-1/2 z-30 h-8 w-8 stroke-white-dark   hover:cursor-pointer"
           />
           <div className="relative top-24 h-full w-2/5 pr-40">
             <div
@@ -88,17 +78,17 @@ const Works = ({ data, className }: WorksProps) => {
               className="mt-[6%] mb-[14%] ml-[10%] -mr-40 h-0.5 w-full"
               style={{ backgroundColor: `${proj.img.color}` }}
             />
-            <p className="ml-[10%] -mr-32 text-sm font-light leading-7 tracking-wide">
+            <p className="ml-[10%] -mr-32 text-sm leading-7">
               {proj.description}
             </p>
             <Button
-              title={'Voir le projet'}
+              title={content.seeProject}
               href={`works/${proj.slug}`}
               className="relative ml-auto -mr-20 mt-6 w-max"
             />
           </div>
           <div
-            className={`relative aspect-video h-auto w-3/5 rounded-md bg-amber-50 bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5`}
+            className={`relative aspect-video h-auto w-3/5 rounded-md p-0.5`}
           >
             <Link href={`works/${proj.slug}`}>
               <div className="relative h-full w-full overflow-hidden rounded-md">
@@ -127,13 +117,13 @@ const Works = ({ data, className }: WorksProps) => {
           </div>
           <ArrowRightCircle
             onClick={handleRightArrowClick}
-            className="absolute -right-12 top-1/2 z-30 h-8 w-8 stroke-black-light hover:cursor-pointer"
+            className="absolute -right-12 top-1/2 z-30 h-8 w-8 stroke-white-dark hover:cursor-pointer"
           />
         </div>
       ))}
 
       <div className="mt-10 flex items-center justify-center">
-        {data.projects.map((proj) => (
+        {projects.map((proj) => (
           <div
             key={proj.id}
             onClick={() => handleProjectClick(proj.id)}

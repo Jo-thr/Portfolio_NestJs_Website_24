@@ -24,7 +24,7 @@ const HeadingWork = ({
   site,
 }: HeadingWorkProps) => {
   return (
-    <div className="relative my-20 grid w-full transform animate-reveal grid-cols-3 flex-row px-20 opacity-0 transition-all duration-700 ease-in-out">
+    <div className="relative mt-28 mb-20 grid w-full transform animate-reveal grid-cols-3 flex-row px-40 opacity-0 transition-all duration-700 ease-in-out">
       <div className="relative col-span-1 flex flex-col gap-6 ">
         <div className="text-lg">{poste}</div>
         <div className="flex flex-col text-sm font-thin tracking-widest">
@@ -72,7 +72,7 @@ const HeadingWork = ({
           Projet
         </h5>
         <h1 className="relative z-10 font-dm">{title}</h1>
-        <p className="mt-10 font-poppins font-light">{description}</p>
+        <p className="mt-10 w-full">{description}</p>
       </div>
     </div>
   )

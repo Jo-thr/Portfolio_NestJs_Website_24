@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export interface FooterProps {
   data: {
@@ -33,7 +33,7 @@ export interface FooterProps {
 const Footer = ({ data }: FooterProps) => {
   const pathname = usePathname()
   return (
-    <footer className="relative z-50 mt-40 flex flex-col items-center gap-40 rounded-t-3xl bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 px-60 py-40 text-black-base">
+    <footer className="relative z-50 mt-40 flex flex-col items-center gap-40 rounded-t-3xl bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 px-60 pt-40 pb-10 text-black-base">
       <div className="flex w-full flex-row justify-between font-light">
         <div className="flex flex-col">
           <h3>{data.adressTitle}</h3>
@@ -44,7 +44,7 @@ const Footer = ({ data }: FooterProps) => {
         </div>
         <div className="flex flex-col">
           <h3>{data.linksTitle}</h3>
-          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-20">
+          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-6">
             {data.links.map((link) => (
               <div key={link.id}>
                 {pathname.includes(link.link) ? (
@@ -66,7 +66,7 @@ const Footer = ({ data }: FooterProps) => {
         </div>
         <div className="flex flex-col">
           <h3>{data.socialsTitle}</h3>
-          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-20 font-light text-black-dark/70">
+          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-10 font-light text-black-dark/70">
             {data.socials.map((link) => (
               <Link href={link.link} key={link.id}>
                 {link.title}
@@ -84,7 +84,7 @@ const Footer = ({ data }: FooterProps) => {
           </Link>
         </div>
       </div>
-      <div className="text-black-base/20">{data.copyright}</div>
+      <div className="text-xs text-black-dark/70">{data.copyright}</div>
     </footer>
   )
 }

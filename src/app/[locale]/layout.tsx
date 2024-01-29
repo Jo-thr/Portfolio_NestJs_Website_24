@@ -1,14 +1,14 @@
 import '@/assets/globals.css'
-import { i18n } from '@/i18n-config'
-import type { Metadata } from 'next'
-import { Allison, DM_Serif_Display, Poppins } from 'next/font/google'
+import Footer from '@/components/Footer/Footer'
+import Gradient from '@/components/Gradient/Gradient'
 import Navbar from '@/components/Navbar/Navbar'
 import { getDictionary } from '@/hooks/getDictionary'
-import Gradient from '@/components/Gradient/Gradient'
-import Footer from '@/components/Footer/Footer'
-import Link from 'next/link'
-import Image from 'next/image'
+import { i18n } from '@/i18n-config'
 import MinLogo from '@public/images/LOGO-POINT.svg'
+import type { Metadata } from 'next'
+import { Allison, DM_Serif_Display, Poppins } from 'next/font/google'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -52,7 +52,10 @@ export default async function RootLayout({
           <Image src={MinLogo} alt={'Logo'} className="max-w-[2rem]" />
         </Link>
         {children}
-        <Navbar dataSummary={dictionary.summary} />
+        <Navbar
+          dataSummary={dictionary.summary}
+          content={dictionary.extraContent}
+        />
         <Gradient />
         <Footer data={dictionary.footer} />
       </body>

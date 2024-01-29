@@ -4,6 +4,7 @@ export interface SectionProps {
   children: ReactNode
   className?: string
   subtitle?: string
+  id?: string
   title?: string
   text?: string
 }
@@ -13,10 +14,12 @@ const Section = ({
   children,
   subtitle,
   title,
+  id,
   text,
 }: SectionProps) => {
   return (
     <section
+      id={id}
       className={`${className} relative w-full flex-col items-center p-40`}
     >
       <div className="relative mb-20">
@@ -24,7 +27,7 @@ const Section = ({
           {subtitle}
         </h5>
         <h2 className="ml-4 font-dm">{title}</h2>
-        <p className="mt-10 w-3/4 font-poppins font-light">{text}</p>
+        <p className="mt-10 w-3/4">{text}</p>
       </div>
       {children}
     </section>

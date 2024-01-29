@@ -12,25 +12,29 @@ export default async function Home({
 }) {
   const dictionary = await getDictionary(locale)
   const data = dictionary.home
-  const dataSkills = dictionary.skillPage
-  const works = dictionary.worksPage
+  const dataHeroBanner = data.heroBanner
+  const dataSkills = data.skillSection
+  const projects = dictionary.projects
   return (
     <div>
-      <HomeSection />
+      <HomeSection data={dataHeroBanner} />
       <Section
-        title={data.aboutSection.about.title}
-        subtitle={data.aboutSection.about.subtitle}
-        text={data.aboutSection.about.text}
+        id={'aboutSection'}
+        title={data.aboutSection.title}
+        subtitle={data.aboutSection.subtitle}
+        text={data.aboutSection.text}
       >
         Tchô !
       </Section>
       <Section
+        id={'projectSection'}
         title={data.projectSection.title}
         subtitle={data.projectSection.subtitle}
       >
-        <Works data={works} />
+        <Works projects={projects} content={dictionary.extraContent} />
       </Section>
       <Section
+        id={'skillSection'}
         title={data.skillSection.title}
         subtitle={data.skillSection.subtitle}
       >
