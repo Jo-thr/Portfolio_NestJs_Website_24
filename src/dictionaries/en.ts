@@ -88,7 +88,7 @@ const EN = {
       ],
     },
     projectSection: {
-      subtitle: 'Selection of works',
+      subtitle: 'Selected works',
       title: "There's nothing like an overview",
     },
   },
@@ -123,7 +123,7 @@ const EN = {
     },
     {
       id: '05',
-      title: 'Socials network',
+      title: 'Social networks',
       link: '/socials',
       logo: false,
       switch: false,
@@ -143,40 +143,30 @@ const EN = {
       area: 'Haute-Savoie',
       city: 'Bonneville, FR',
     },
-    linksTitle: 'Links',
+    linksTitle: 'Liens',
     links: [
       {
         id: '01',
         title: 'About',
-        link: '/about',
-      },
-      {
-        id: '04',
-        title: 'Selected works',
-        link: '/works',
-      },
-      {
-        id: '06',
-        title: 'Contact',
-        link: '/contact',
+        link: '/#aboutSection',
       },
       {
         id: '02',
-        title: 'Skills',
-        link: '/skills',
-      },
-      {
-        id: '03',
         title: 'CV',
         link: '/cv',
       },
       {
-        id: '05',
-        title: 'Socials network',
-        link: '/socials',
+        id: '03',
+        title: 'Skills',
+        link: '/#skillSection',
+      },
+      {
+        id: '04',
+        title: 'Selected works',
+        link: '/#projectSection',
       },
     ],
-    socialsTitle: 'Socials',
+    socialsTitle: 'Social networks',
     socials: [
       {
         id: '01',
@@ -202,7 +192,7 @@ const EN = {
     contactTitle: 'Contact',
     contact: {
       title: 'Contact me',
-      url: '/contact',
+      contactForm: 'Portfolio | Contact us | [Your subject here]',
     },
     copyright: '2023 @ JOTHR. ALL RIGHT RESERVED',
   },
@@ -229,7 +219,8 @@ const EN = {
       short_description: "Everyone knows France TV, but what's France Tv Lab?",
       description:
         "The FTV Lab is the blog dedicated to the innovation of France Television. It's a collaborative platform, with a simplified administration, developed and deployed in 3 months. To serve its strategic positioning in the context of the merger of France Télévisions and Radio France, France TV wanted to redesign its innovation platform.\nThe project was conducted in agile mode in a context of mature business needs and a strong commitment in terms of scope/timing.\n The success of this project led FTV info to entrust two other projects of bigger scale to Wizards Technologies teams. Thus, we have renovated the application in order to make it lighter, more dynamic and powerful.",
-      contribution: ``,
+      contribution: `Implementation of a frontend stack in Nuxt.Js and TailwindCss, covering all the Ui requirements of the project. Creation of dynamic pages with a common structure, so as to be able to administer as many articles as possible without requiring the intervention of a developer. Emphasis on accessibility, a key issue for the client. Restructured the backend for the creation of new content based on content supplied by the customer in Miro. Defined page types and structures for efficient content deployment.
+      Daily discussions with the team and the customer to monitor what was being achieved, what was blocking or progressing.`,
 
       img: {
         color: '#0123FF',
@@ -260,16 +251,16 @@ const EN = {
       },
 
       mission: `
-      • Réalisation d'un front-end afin d'afficher un contenu de site vitrine dynamique sans nécessité une interventions d'un développeur. (NextJs / TailwindCss / TypeScript)
-      • Créatoin et administration d'un backend et de ressources clé en main pour le client (PayloadCms / GraphQL / API AutoScout24)
-      • Intégration d'un gestionnaire de cookies afin d'obtenir une data au plus juste pour chaque utilisateur. (GoogleTagManager / Tarte au citron / Hotjar )
-      `,
+      • Creation of a front-end to display dynamic website content without the need for developer intervention (NextJs / TailwindCss / TypeScript).
+      • Creation and administration of a backend and turnkey resources for the customer (PayloadCms / GraphQL / AutoScout24 API)
+      • Integration of a cookie manager to obtain the most accurate data for each user. (GoogleTagManager / Lemon pie / Hotjar )
+  `,
       short_description:
         'Le e-shop qui référence uniquement\nles boutiques parisiennes indépendantes.',
-      description:
-        'Paris.Shopping met à l’honneur les meilleures boutiques et marques parisiennes, et propose chaque semaine LA sélection des produits préférés des Parisiens : les plus stylés, les plus tendances, les plus so chic, bref… les plus parisiens. Pour que chacun, qu’ils viennent en voisin ou depuis l’autre bout du monde, puisse accéder aux meilleures adresses de shopping. Et à l’esprit de Paris.',
-      contribution:
-        "J'ai mis en place une stack technique intégrale s'articulant autour d'un backend structuré et une gestion d'API. J'y ai créé des contenus afin d'enrichir leurs différentes pages. J'ai aussi intégré des outils de tracking, gestion de cookies et des formulaires. Concernant le frontend, j'ai intégré l'intégralité des contenus très orienté ecommerce afin de partager efficacement leurs annonces véhicules, leurs connaissances et leurs courtiers, le tout articulé autour de maquettes figma. Discussions quotidiennes avec l'équipe pour respecter les guidelines UI et le suivi d'intégration.",
+      description: `Le Site de l'Auto is a French group active in European car brokerage since 2014.
+        Wanting to offer a more modern identity to the brand, presenting a new way of approaching a car broker by making their site a showcase innovations. Le Site de l'Auto's need was to reinvent their approach through their showcase site, offering a multitude of vehicles, of all types, available to the customer.`,
+      contribution: `I set up a complete technical stack built around a structured backend and API management. I created content to enrich their various pages. I also integrated tracking tools, cookie management and forms.
+        As for the frontend, I integrated all the ecommerce-oriented content to effectively share their vehicle ads, knowledge and brokers, all articulated around figma models. Daily discussions with the team to ensure compliance with UI guidelines and integration monitoring.`,
 
       img: {
         color: '#E0FC52',
@@ -306,6 +297,7 @@ const EN = {
         'The e-shop that references only independent Parisian stores.',
       description:
         "Paris.Shopping showcases the best Parisian boutiques and brands, and each week offers THE selection of Parisians' favorite products: the most stylish, the most trendy, the most so chic, in short... the most Parisian. So that everyone, whether they come as a neighbor or from the other side of the world, can access the best shopping addresses. And to the spirit of Paris.",
+      contribution: `Give creative impetus to the various projects, while organizing production, its urgencies and unforeseen events. I was responsible for the high quality of the graphic work, as well as the finished products, development and creation. `,
 
       img: {
         color: '#F04249',
@@ -340,7 +332,8 @@ const EN = {
         'Expert in multi-channel distribution for the energy world',
       description:
         "World expert in multi-channel professional distribution of products and services for the energy sector. The Group's offer covers a wide range of sustainable and innovative products, solutions and services in the fields of technical equipment, automation and energy management for construction, renovation, maintenance and production.",
-      contribution: ``,
+      contribution: `Creation of a graphic charter and a complete Ui kit, taking into account customer feedback on needs, aesthetics and page layout. I also carried out the entire integration of the e-commerce site, including catalog, shopping tunnel and Rexel-specific pages. I also scraped all their products and product categories to obtain a catalog rich in proposals.
+      In this way, we organized daily discussions with the team and the customer to keep an eye on what was being achieved, blocked or progressing`,
 
       img: {
         color: '#00448c',
@@ -416,7 +409,8 @@ const EN = {
         'A green and responsible production\nstudio is committed to its clients.',
       description:
         'A production studio that commits to its clients to create a business impact, to improve their relevance by reinventing their offers or core business model, and to deliver value more quickly through the implementation of cross-disciplinary teams and methods.',
-      contribution: ``,
+      contribution: `I set up a complete technical stack based around a structured backend and API management. I created content to publish their projects and put their customers online. I also integrated tracking tools, cookie management and forms.
+      As for the frontend, I integrated all blog-oriented content to effectively share their projects, knowledge and profiles, all articulated around figma models. Daily discussions with the team to ensure compliance with UI guidelines and integration monitoring.`,
 
       img: {
         color: '#36A364',

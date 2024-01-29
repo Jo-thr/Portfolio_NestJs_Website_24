@@ -1,6 +1,6 @@
 'use client'
 import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import Button from '../Button/Button'
@@ -14,23 +14,23 @@ export type WorksProps = {
 
     poste: string
     year: string
-    site: string
+    site?: string
     techno: {
-      front: string
-      back: string
-      data: string
-      devops: string
-      tools: string
+      front?: string
+      back?: string
+      data?: string
+      devops?: string
+      tools?: string
     }
     mission: string
     short_description: string
     description: string
-    contribution: string
+    contribution?: string
 
     img: {
       color: string
-      logo: string
-      cover: string
+      logo: StaticImageData
+      cover: StaticImageData
     }
   }[]
   className?: string
@@ -57,7 +57,7 @@ const Works = ({ projects, content, className }: WorksProps) => {
       {projects.map((proj) => (
         <div
           key={proj.id}
-          className={`relative z-20 mt-20 flex h-full w-full flex-row ${className} ${
+          className={`relative z-20 mt-40 flex h-full w-full flex-row ${className} ${
             workSelected != proj.id && 'hidden'
           }`}
         >
@@ -94,7 +94,7 @@ const Works = ({ projects, content, className }: WorksProps) => {
               <div className="relative h-full w-full overflow-hidden rounded-md">
                 <Image
                   src={proj.img.cover}
-                  alt={proj.img.cover}
+                  alt={proj.name}
                   style={{ objectFit: 'cover' }}
                   fill
                 />
@@ -107,7 +107,7 @@ const Works = ({ projects, content, className }: WorksProps) => {
               <div className="relative h-full w-full mix-blend-luminosity ">
                 <Image
                   src={proj.img.logo}
-                  alt={proj.img.logo}
+                  alt={proj.name}
                   style={{ objectFit: 'contain' }}
                   fill
                   className="rotate-3 "

@@ -191,7 +191,7 @@ const FR = {
     contactTitle: 'Contact',
     contact: {
       title: 'Contacter-moi',
-      url: '/contact',
+      contactForm: 'Portfolio | Prise de contact | [Votre sujet ici]',
     },
     copyright: '2023 @ JOTHR. ALL RIGHT RESERVED',
   },
@@ -256,14 +256,13 @@ const FR = {
       mission: `
       • Réalisation d'un front-end afin d'afficher un contenu de site vitrine dynamique sans nécessité une interventions d'un développeur. (NextJs / TailwindCss / TypeScript)
       • Créatoin et administration d'un backend et de ressources clé en main pour le client (PayloadCms / GraphQL / API AutoScout24)
-      • Intégration d'un gestionnaire de cookies afin d'obtenir une data au plus juste pour chaque utilisateur. (GoogleTagManager / Tarte au citron / Hotjar )
-      `,
+      • Intégration d'un gestionnaire de cookies afin d'obtenir une data au plus juste pour chaque utilisateur. (GoogleTagManager / Tarte au citron / Hotjar )`,
       short_description:
         'Le e-shop qui référence uniquement\nles boutiques parisiennes indépendantes.',
-      description:
-        'Paris.Shopping met à l’honneur les meilleures boutiques et marques parisiennes, et propose chaque semaine LA sélection des produits préférés des Parisiens : les plus stylés, les plus tendances, les plus so chic, bref… les plus parisiens. Pour que chacun, qu’ils viennent en voisin ou depuis l’autre bout du monde, puisse accéder aux meilleures adresses de shopping. Et à l’esprit de Paris.',
-      contribution:
-        "J'ai mis en place une stack technique intégrale s'articulant autour d'un backend structuré et une gestion d'API. J'y ai créé des contenus afin d'enrichir leurs différentes pages. J'ai aussi intégré des outils de tracking, gestion de cookies et des formulaires. Concernant le frontend, j'ai intégré l'intégralité des contenus très orienté ecommerce afin de partager efficacement leurs annonces véhicules, leurs connaissances et leurs courtiers, le tout articulé autour de maquettes figma. Discussions quotidiennes avec l'équipe pour respecter les guidelines UI et le suivi d'intégration.",
+      description: `Le Site de l'Auto est un groupe français actif dans la le courtage automobile européen depuis 2014.
+        Voulant offrir une identité plus moderne à la marque, en présentant de nouvelle façon d'aborder un courtier automobile en faisant de leur site une innovations de vitrine. Le besoin de Le Site de l'Auto était de réinventer leur approche au travers leur site vitrine, proposant une multitude de véhicules, de tout types, à disposition du client.`,
+      contribution: `J'ai mis en place une stack technique intégrale s'articulant autour d'un backend structuré et une gestion d'API. J'y ai créé des contenus afin d'enrichir leurs différentes pages. J'ai aussi intégré des outils de tracking, gestion de cookies et des formulaires.
+        Concernant le frontend, j'ai intégré l'intégralité des contenus très orienté ecommerce afin de partager efficacement leurs annonces véhicules, leurs connaissances et leurs courtiers, le tout articulé autour de maquettes figma. Discussions quotidiennes avec l'équipe pour respecter les guidelines UI et le suivi d'intégration.`,
 
       img: {
         color: '#E0FC52',

@@ -24,7 +24,7 @@ export interface FooterProps {
     contactTitle: string
     contact: {
       title: string
-      url: string
+      contactForm: string
     }
     copyright: string
   }
@@ -77,7 +77,7 @@ const Footer = ({ data }: FooterProps) => {
         <div className="flex flex-col">
           <h3>{data.contactTitle}</h3>
           <Link
-            href={data.contact.url}
+            href={`mailto:johnjohn.thr@gmail.com?subject=${data.contact.contactForm}`}
             className="mt-14 flex flex-col gap-4 font-light text-black-dark/70"
           >
             {data.contact.title}

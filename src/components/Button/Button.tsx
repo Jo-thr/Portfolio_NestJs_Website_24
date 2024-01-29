@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import { ImageSVG } from '@/components/Icons/Icons'
 import Link from 'next/link'
 
