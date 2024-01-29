@@ -4,6 +4,16 @@ import { getDictionary } from '@/hooks/getDictionary'
 import Image from 'next/image'
 import Link from 'next/link'
 
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string }
+}) {
+  return {
+    title: slug,
+  }
+}
+
 const WorkPage = async ({
   params: { locale, slug },
 }: {
@@ -16,7 +26,7 @@ const WorkPage = async ({
   return (
     <div className="relative mb-40 flex h-full w-full flex-col items-center justify-center sm:px-20 ">
       <RouterBack
-        className="fixed -top-[4vh] -right-[12vw] sm:right-0"
+        className="fixed -top-[4vh] -right-[12vw] sm:-top-[2vh] sm:right-0"
         icon={'Cross'}
       />
       <div className="relative h-full w-full transform animate-reveal-tb p-10 opacity-0 transition-all ease-in-out sm:p-20">

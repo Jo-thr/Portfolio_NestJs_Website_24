@@ -18,7 +18,7 @@ const HomeSection = ({ data }: HomeSectionProps) => {
       <div className="absolute z-50 flex h-[80vh] w-full transform animate-deappear items-center justify-center bg-[#000000] transition-all duration-500 ease-in-out sm:h-screen">
         <Image src={LogoAnimation} alt="DesktopOnly" className="z-20 w-1/4" />
       </div>
-      <div className="relative flex h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:h-screen">
+      <div className="relative flex h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:h-screen sm:flex-row">
         <Image
           src={DesktopOnly}
           alt="DesktopOnly"
