@@ -58,7 +58,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
           isOpen
             ? 'rounded-[2rem] border bg-black-dark bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border'
             : 'rounded-[3rem] bg-black-dark/50'
-        } fixed bottom-[5vh] left-[3vw] z-50 w-[94vw] transform border border-black-medium bg-black-dark/50 backdrop-blur-md transition-all duration-500 ease-in-out`}
+        } fixed bottom-[2vh] left-[3vw] z-50 w-[94vw] transform border border-black-medium bg-black-dark/50 backdrop-blur-md transition-all duration-500 ease-in-out sm:bottom-[5vh]`}
       >
         <div
           className={`${
@@ -80,7 +80,15 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
               {urlSegments.slice(-1)}
             </h5>
           </div>
-          <div className="flex flex-row items-center justify-end gap-10">
+          <Button
+            title={isOpen ? content.close : content.menu}
+            icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+            onClick={handleMenu}
+            className={
+              'transform font-poppins transition-all duration-500 ease-in-out sm:hidden'
+            }
+          />
+          <div className="mr-3 flex flex-row items-center justify-end gap-10 sm:mr-0">
             <Switcher
               className={`${
                 isOpen && 'opacity-10'
@@ -91,7 +99,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
               icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
               onClick={handleMenu}
               className={
-                'transform font-poppins transition-all duration-500 ease-in-out'
+                'hidden transform font-poppins transition-all duration-500 ease-in-out sm:block'
               }
             />
           </div>

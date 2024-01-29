@@ -18,15 +18,15 @@ a {
 }
 
 h1 {
-  @apply font-dm text-[8rem] font-black leading-[7rem];
+  @apply font-dm text-6xl font-black sm:text-[8rem] sm:leading-[7rem];
 }
 h2 {
-  @apply text-6xl font-black;
+  @apply text-4xl  font-black sm:text-6xl;
 }
 h3 {
-  @apply font-dm text-2xl;
+  @apply font-dm text-lg sm:text-2xl;
 }
 
 p {
-  @apply whitespace-pre-line font-poppins font-thin tracking-wider;
+  @apply whitespace-pre-line font-poppins font-light tracking-wider sm:font-thin;
 }

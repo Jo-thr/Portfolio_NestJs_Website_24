@@ -33,18 +33,18 @@ export interface FooterProps {
 const Footer = ({ data }: FooterProps) => {
   const pathname = usePathname()
   return (
-    <footer className="relative z-50 mt-40 flex flex-col items-center gap-40 rounded-t-3xl bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 px-60 pt-40 pb-10 text-black-base">
-      <div className="flex w-full flex-row justify-between font-light">
+    <footer className="relative z-50 mt-40 flex flex-col items-center gap-20 rounded-t-3xl bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 px-10 pt-10 pb-10 text-black-base sm:gap-40 sm:px-60 sm:pt-40">
+      <div className="flex w-full flex-col justify-between gap-14 font-light sm:flex-row sm:gap-0">
         <div className="flex flex-col">
           <h3>{data.adressTitle}</h3>
-          <div className="mt-14 flex flex-col gap-4 font-light text-black-dark/70">
+          <div className="mt-6 flex flex-col gap-1 font-light text-black-dark/70 sm:mt-14 sm:gap-4">
             <span>{data.adress.city}</span>
             <span>{data.adress.area}</span>
           </div>
         </div>
         <div className="flex flex-col">
           <h3>{data.linksTitle}</h3>
-          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-6">
+          <div className="mt-6 grid gap-1 gap-x-6 sm:mt-14 sm:grid-cols-2 sm:gap-4">
             {data.links.map((link) => (
               <div key={link.id}>
                 {pathname.includes(link.link) ? (
@@ -66,7 +66,7 @@ const Footer = ({ data }: FooterProps) => {
         </div>
         <div className="flex flex-col">
           <h3>{data.socialsTitle}</h3>
-          <div className="mt-14 grid grid-cols-2 gap-4 gap-x-10 font-light text-black-dark/70">
+          <div className="mt-6 grid gap-1 gap-x-10 font-light text-black-dark/70 sm:mt-14 sm:grid-cols-2 sm:gap-4">
             {data.socials.map((link) => (
               <Link href={link.link} key={link.id}>
                 {link.title}
@@ -78,7 +78,7 @@ const Footer = ({ data }: FooterProps) => {
           <h3>{data.contactTitle}</h3>
           <Link
             href={`mailto:johnjohn.thr@gmail.com?subject=${data.contact.contactForm}`}
-            className="mt-14 flex flex-col gap-4 font-light text-black-dark/70"
+            className="mt-6 flex flex-col gap-1 font-light text-black-dark/70 sm:mt-14 sm:gap-4"
           >
             {data.contact.title}
           </Link>

@@ -14,9 +14,12 @@ const WorkPage = async ({
   const otherProjects = dictionary.projects.filter((proj) => proj.slug !== slug)
 
   return (
-    <div className="relative mb-40 flex h-full w-full flex-col items-center justify-center px-20 ">
-      <RouterBack className="fixed -top-4 right-0" icon={'Cross'} />
-      <div className="relative h-full w-full transform animate-reveal-tb p-20 opacity-0 transition-all ease-in-out">
+    <div className="relative mb-40 flex h-full w-full flex-col items-center justify-center sm:px-20 ">
+      <RouterBack
+        className="fixed -top-[4vh] -right-[12vw] sm:right-0"
+        icon={'Cross'}
+      />
+      <div className="relative h-full w-full transform animate-reveal-tb p-10 opacity-0 transition-all ease-in-out sm:p-20">
         <div className="relative z-50 aspect-[16/8] h-full w-full overflow-hidden rounded-xl bg-white-dark">
           <Image
             src={data.img.cover}
@@ -41,8 +44,10 @@ const WorkPage = async ({
       />
 
       <div
-        className={`my-40 grid w-full gap-20 px-40 ${
-          data.projet.length > 2 ? 'grid-cols-3 px-40' : ' grid-cols-2'
+        className={`my-20 flex w-full flex-col gap-20 px-10 sm:my-40 sm:grid sm:px-40 ${
+          data.projet.length > 2
+            ? 'grid-cols-1 px-10 sm:grid-cols-3 sm:px-40'
+            : 'grid-cols-1 sm:grid-cols-2'
         }`}
       >
         {data.projet.slice(0, 3).map((item, index) => (
@@ -102,14 +107,14 @@ const WorkPage = async ({
         ))}
       </div>
 
-      <div className="mt-20 flex w-full flex-col gap-10 px-20">
+      <div className="mt-20 flex w-full flex-col gap-10 px-10 sm:px-20">
         <div className="relative flex w-full flex-col ">
           <h5 className="absolute z-20 -mt-12 -ml-4 -rotate-3 transform bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text font-allison text-5xl text-transparent">
             {dictionary.extraContent.projects}
           </h5>
           <h2 className="relative z-10 font-dm">Collections</h2>
         </div>
-        <div className="grid grid-cols-3 gap-20">
+        <div className="flex grid-cols-3 flex-col gap-20 sm:grid">
           {otherProjects
             .sort(() => Math.random() - 0.5)
             .slice(0, 3)

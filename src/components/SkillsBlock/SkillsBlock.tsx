@@ -29,8 +29,8 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
       : data.skills
 
   return (
-    <div className="mt-20 w-full animate-appear opacity-0">
-      <div className="flex flex-row items-center gap-4">
+    <div className="-mt-6 w-full animate-appear opacity-0 sm:mt-20">
+      <div className="flex flex-wrap items-center gap-2 sm:flex-row sm:gap-4">
         {data.tags.map((tag) => (
           <Tag
             key={tag.id}
@@ -43,16 +43,18 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
         ))}
       </div>
       <div
-        className={`relative mt-10 grid w-full min-w-full grid-cols-8 items-center justify-center gap-10`}
+        className={`relative mt-10 grid w-full min-w-full grid-cols-3 items-center justify-center gap-4 sm:grid-cols-8 sm:gap-10`}
       >
         {(isSelected.length ? selectedSkills : favSkills).map((item) => (
           <div
             key={item.id}
-            className={`group aspect-square w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5  transition-all duration-500 ease-in-out`}
+            className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 transition-all  duration-500 ease-in-out sm:aspect-square`}
           >
-            <div className="flex h-full w-full flex-col gap-4 rounded-md bg-[#000] p-6 group-hover:bg-teal-300/10">
-              <p className="text-sm">{item.domain}</p>
-              <div className="h-1 w-full rounded-full bg-teal-100" />
+            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-2 group-hover:bg-teal-300/10 sm:gap-4 sm:p-3 sm:p-6">
+              <p className="whitespace-nowrap text-xs tracking-tighter sm:text-sm">
+                {item.domain}
+              </p>
+              <div className="h-px w-full rounded-full bg-teal-100 sm:h-1" />
               <h3>{item.name}</h3>
             </div>
           </div>
