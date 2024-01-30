@@ -50,7 +50,7 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
             key={item.id}
             className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 transition-all  duration-500 ease-in-out sm:aspect-square`}
           >
-            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-2 group-hover:bg-teal-300/10 sm:gap-4 sm:p-3 sm:p-6">
+            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-3 group-hover:bg-teal-300/10 sm:gap-4 sm:p-6">
               <p className="whitespace-nowrap text-xs tracking-tighter sm:text-sm">
                 {item.domain}
               </p>
