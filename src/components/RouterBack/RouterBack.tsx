@@ -1,13 +1,14 @@
 'use client'
 
-import { ArrowLeftCircle } from 'lucide-react'
+import { ArrowLeftCircle, X } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 export interface RouterBackProps {
   className: string
+  icon?: 'ArrowLeft' | 'Cross'
 }
 
-const RouterBack = ({ className }: RouterBackProps) => {
+const RouterBack = ({ className, icon = 'Cross' }: RouterBackProps) => {
   const router = useRouter()
   const handleBack = () => {
     router.back()
@@ -19,7 +20,8 @@ const RouterBack = ({ className }: RouterBackProps) => {
       onClick={handleBack}
       className={`${className} z-50 m-10 rounded-full stroke-white-base p-10`}
     >
-      <ArrowLeftCircle />
+      {icon === 'ArrowLeft' && <ArrowLeftCircle />}
+      {icon === 'Cross' && <X />}
     </button>
   )
 }

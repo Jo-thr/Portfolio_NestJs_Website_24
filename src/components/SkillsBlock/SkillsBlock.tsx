@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
 import Tag from '@/components/Tag/Tag'
-import { motion, Variants } from 'framer-motion'
+import { useState } from 'react'
 
 export interface SkillsBlockProps {
   data: {
@@ -29,23 +28,9 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
       ? data.skills.filter((skill) => skill.domain === isSelected)
       : data.skills
 
-  const cardVariants: Variants = {
-    offscreen: {
-      y: 300,
-    },
-    onscreen: {
-      y: 50,
-      transition: {
-        type: 'spring',
-        bounce: 0,
-        duration: 0.8,
-      },
-    },
-  }
-
   return (
-    <div className="mt-40 w-full animate-appear px-20 opacity-0">
-      <div className="mb-10 flex flex-row items-center gap-4">
+    <div className="-mt-6 w-full animate-appear opacity-0 sm:mt-20">
+      <div className="flex flex-wrap items-center gap-2 sm:flex-row sm:gap-4">
         {data.tags.map((tag) => (
           <Tag
             key={tag.id}
@@ -57,24 +42,24 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
           />
         ))}
       </div>
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        className={`relative grid w-full min-w-full grid-cols-6 items-center justify-center gap-20`}
+      <div
+        className={`relative mt-10 grid w-full min-w-full grid-cols-3 items-center justify-center gap-4 sm:grid-cols-8 sm:gap-10`}
       >
         {(isSelected.length ? selectedSkills : favSkills).map((item) => (
-          <motion.div
-            variants={cardVariants}
+          <div
             key={item.id}
-            className={`flex aspect-square w-full flex-col gap-6 rounded-md border-4 border-teal-200  p-8 transition-all duration-500 ease-in-out hover:animate-pulse hover:bg-teal-300/5 `}
+            className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 transition-all  duration-500 ease-in-out sm:aspect-square`}
           >
-            <p className="text-lg">{item.domain}</p>
-            <div className="h-1 w-full rounded-full bg-teal-100" />
-            <h3>{item.name}</h3>
-          </motion.div>
+            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-2 group-hover:bg-teal-300/10 sm:gap-4 sm:p-3 sm:p-6">
+              <p className="whitespace-nowrap text-xs tracking-tighter sm:text-sm">
+                {item.domain}
+              </p>
+              <div className="h-px w-full rounded-full bg-teal-100 sm:h-1" />
+              <h3>{item.name}</h3>
+            </div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }

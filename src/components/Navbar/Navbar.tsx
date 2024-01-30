@@ -1,18 +1,19 @@
 'use client'
+import Button from '@/components/Button/Button'
+import { IconType, ImageSVG } from '@/components/Icons/Icons'
+import Switcher from '@/components/Switcher/Switcher'
+import MinLogo from '@public/images/LOGO-POINT.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   useParams,
   usePathname,
   useSelectedLayoutSegments,
 } from 'next/navigation'
-import LogoWhite from '@public/images/Logo-white.svg'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { IconType } from '@/components/Icons/Icons'
-import Button from '@/components/Button/Button'
-import Switcher from '@/components/Switcher/Switcher'
 
 export interface NavbarProps {
+  content: any
   dataSummary: {
     id: string
     title: string
@@ -20,7 +21,7 @@ export interface NavbarProps {
   }[]
 }
 
-const Navbar = ({ dataSummary }: NavbarProps) => {
+const Navbar = ({ dataSummary, content }: NavbarProps) => {
   const urlSegments = useSelectedLayoutSegments()
 
   const locale = useParams()?.locale
@@ -51,57 +52,68 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
   }
 
   return (
-    <nav
-      className={`${
-        (pathname === '/' || pathname === '/en') && 'hidden'
-      } absolute z-40 animate-appear opacity-0`}
-    >
+    <nav className="absolute z-40 animate-appear opacity-0">
       <div
         className={`${
           isOpen
-            ? 'rounded-[2rem] bg-black-dark'
+            ? 'rounded-[2rem] border bg-black-dark bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border'
             : 'rounded-[3rem] bg-black-dark/50'
-        } fixed bottom-[5vh] left-[3vw] z-50 w-[94vw] transform border border-black-medium bg-black-dark/50 backdrop-blur-md transition-all duration-500 ease-in-out`}
+        } fixed bottom-[2vh] left-[3vw] z-50 w-[94vw] transform border border-black-medium bg-black-dark/50 backdrop-blur-md transition-all duration-500 ease-in-out sm:bottom-[5vh]`}
       >
         <div
           className={`${
             isOpen ? 'opacity-100 ' : 'opacity-0'
-          } text-white-lighten absolute left-1/2 z-40 -mt-10 w-max translate-x-[-50%] font-koulen tracking-widest transition-opacity delay-500 duration-500`}
+          } text-white-lighten absolute left-1/2 z-40 -mt-10 w-max translate-x-[-50%] font-allison tracking-widest transition-opacity delay-150 duration-500`}
         >
-          - Menu -
+          - {content.menu} -
         </div>
         <div className="relative flex flex-row items-center justify-between p-2">
           <div className="ml-3 flex flex-row items-center justify-start gap-4">
             <Link href={`/${locale}`}>
-              <Image src={LogoWhite} alt={'Logo'} />
+              <Image src={MinLogo} alt={'Logo'} className="h-8 max-w-[2rem]" />
             </Link>
             <h5
-              className={`font-koulen ${
+              className={`font-poppins ${
                 isOpen && 'opacity-10'
               } transform text-xl transition-all duration-500 ease-in-out`}
             >
               {urlSegments.slice(-1)}
             </h5>
           </div>
-          <div className="flex flex-row items-center justify-end gap-10">
+          <Button
+            title={isOpen ? content.close : content.menu}
+            icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+            onClick={handleMenu}
+            className={
+              'transform font-poppins transition-all duration-500 ease-in-out sm:hidden'
+            }
+          />
+          <div className="mr-3 flex flex-row items-center justify-end gap-10 sm:mr-0">
             <Switcher
               className={`${
                 isOpen && 'opacity-10'
               } relative transform transition-all duration-500 ease-in-out`}
             />
-            <Button
-              title={isOpen ? 'FERMER' : 'MENU'}
-              icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+            <button
+              className={`${
+                isOpen ? 'border-white-base' : 'border-transparent'
+              } flex flex-row items-center justify-center gap-3 rounded-full border border-transparent bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border hover:cursor-pointer`}
               onClick={handleMenu}
-              className={
-                'transform font-koulen transition-all duration-500 ease-in-out'
-              }
-            />
+            >
+              <div
+                className={`${
+                  isOpen ? 'bg-transparent' : 'bg-black-dark'
+                } flex flex-row items-center justify-center gap-3 rounded-full px-4 py-2 sm:px-6 sm:py-3`}
+              >
+                <h5>{isOpen ? content.close : content.menu}</h5>
+                {ImageSVG[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+              </div>
+            </button>
           </div>
         </div>
         {isOpen && (
           <div className="relative mt-1 w-full border-t border-black-medium p-6 ">
-            <h5 className={`font-koulen text-lg`}>Pages</h5>
+            <h5 className={`font-poppins text-lg`}>Pages</h5>
             <div className="flex flex-row gap-4">
               {dataSummary?.map((item: any) => (
                 <Link
@@ -112,7 +124,7 @@ const Navbar = ({ dataSummary }: NavbarProps) => {
                   }`}
                   onClick={handleMenu}
                 >
-                  {item.link}
+                  /{item.title}
                 </Link>
               ))}
             </div>
