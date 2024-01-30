@@ -1,6 +1,6 @@
 'use client'
 import Button from '@/components/Button/Button'
-import { IconType } from '@/components/Icons/Icons'
+import { IconType, ImageSVG } from '@/components/Icons/Icons'
 import Switcher from '@/components/Switcher/Switcher'
 import MinLogo from '@public/images/LOGO-POINT.svg'
 import Image from 'next/image'
@@ -94,14 +94,21 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
                 isOpen && 'opacity-10'
               } relative transform transition-all duration-500 ease-in-out`}
             />
-            <Button
-              title={isOpen ? content.close : content.menu}
-              icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+            <button
+              className={`${
+                isOpen ? 'border-white-base' : 'border-transparent'
+              } flex flex-row items-center justify-center gap-3 rounded-full border border-transparent bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border hover:cursor-pointer`}
               onClick={handleMenu}
-              className={
-                'hidden transform font-poppins transition-all duration-500 ease-in-out sm:block'
-              }
-            />
+            >
+              <div
+                className={`${
+                  isOpen ? 'bg-transparent' : 'bg-black-dark'
+                } flex flex-row items-center justify-center gap-3 rounded-full px-4 py-2 sm:px-6 sm:py-3`}
+              >
+                <h5>{isOpen ? content.close : content.menu}</h5>
+                {ImageSVG[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+              </div>
+            </button>
           </div>
         </div>
         {isOpen && (
@@ -117,7 +124,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
                   }`}
                   onClick={handleMenu}
                 >
-                  {item.link}
+                  /{item.title}
                 </Link>
               ))}
             </div>
