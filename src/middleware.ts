@@ -1,5 +1,5 @@
-import { NextResponse, NextRequest } from 'next/server'
 import { i18n } from '@/i18n-config'
+import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
@@ -41,6 +41,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Do not run the middleware on the following paths
-  matcher:
-    '/((?!api|_next/static|_next/image|manifest.json|assets|favicon.ico).*)',
+  matcher: '/((?!api|_next/static|manifest.json|assets|favicon.ico).*)',
 }
