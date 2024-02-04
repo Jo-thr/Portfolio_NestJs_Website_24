@@ -97,7 +97,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
             <button
               className={`${
                 isOpen ? 'border-white-base' : 'border-transparent'
-              } flex flex-row items-center justify-center gap-3 rounded-full border border-transparent bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border hover:cursor-pointer`}
+              } hidden flex-row items-center justify-center gap-3 rounded-full border border-transparent bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border hover:cursor-pointer sm:flex`}
               onClick={handleMenu}
             >
               <div

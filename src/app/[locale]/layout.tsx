@@ -1,4 +1,5 @@
 import '@/assets/globals.css'
+import CursorFollower from '@/components/CursorFollower/CursorFollower'
 import Footer from '@/components/Footer/Footer'
 import Gradient from '@/components/Gradient/Gradient'
 import Navbar from '@/components/Navbar/Navbar'
@@ -44,6 +45,7 @@ export default async function RootLayout({
       <body
         className={`min-h-screen min-w-full overflow-visible ${dm.variable} ${allison.variable} ${poppins.variable}`}
       >
+        <CursorFollower />
         <Link
           href={`/${params.locale}`}
           className="fixed top-[5vh] left-[3vw] z-50 w-[94vw] "
