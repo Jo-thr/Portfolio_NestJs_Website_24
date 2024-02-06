@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'framer-motion'
 import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
@@ -53,7 +54,15 @@ const Works = ({ projects, content, className }: WorksProps) => {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        ease: 'linear',
+        bounce: 0.4,
+        duration: 2,
+      }}
+    >
       {projects.map((proj) => (
         <div
           key={proj.id}
@@ -65,6 +74,7 @@ const Works = ({ projects, content, className }: WorksProps) => {
             onClick={handleLeftArrowClick}
             className="absolute top-1 z-30 h-6 w-6 stroke-white-dark hover:cursor-pointer sm:-left-12 sm:top-1/2 sm:h-8 sm:w-8"
           />
+          {/* LEFT CONTENT */}
           <div className="relative h-full w-full sm:top-24 sm:w-2/5 sm:pr-40">
             <div
               className={`flex h-full w-full transform flex-row items-center justify-center gap-12 font-dm text-2xl font-bold !text-white-base text-white-dark/50 transition-all duration-500 ease-in-out hover:cursor-pointer sm:justify-end sm:text-right sm:text-5xl ${
@@ -98,12 +108,20 @@ const Works = ({ projects, content, className }: WorksProps) => {
             <p className="text-center text-xs sm:-mr-32 sm:ml-[10%] sm:hidden sm:leading-7">
               {proj.short_description}
             </p>
-            <Button
-              title={content.seeProject}
-              href={`works/${proj.slug}`}
-              className="relative ml-auto mr-auto mt-6 w-max sm:-mr-20"
-            />
+
+            <motion.div
+              whileHover={{ scale: 0.9 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              <Button
+                title={content.seeProject}
+                href={`works/${proj.slug}`}
+                className="relative ml-auto mr-auto mt-6 w-max sm:-mr-20"
+              />
+            </motion.div>
           </div>
+          {/* RIGHT CONTENT */}
           <div
             className={`relative hidden aspect-video h-auto w-full rounded-md p-0.5 sm:block sm:w-3/5`}
           >
@@ -152,7 +170,7 @@ const Works = ({ projects, content, className }: WorksProps) => {
           ></div>
         ))}
       </div>
-    </>
+    </motion.div>
   )
 }
 

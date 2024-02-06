@@ -1,7 +1,8 @@
 'use client'
 
 import Tag from '@/components/Tag/Tag'
-import { useState } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useRef, useState } from 'react'
 
 export interface SkillsBlockProps {
   data: {
@@ -28,6 +29,27 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
       ? data.skills.filter((skill) => skill.domain === isSelected)
       : data.skills
 
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+  const animContainer = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 1.3,
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const animItem = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  }
   return (
     <div className="-mt-6 w-full animate-appear opacity-0 sm:mt-20">
       <div className="flex flex-wrap items-center gap-2 sm:flex-row sm:gap-4">
@@ -42,13 +64,19 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
           />
         ))}
       </div>
-      <div
+
+      <motion.ul
+        variants={animContainer}
+        initial="hidden"
+        animate="visible"
         className={`relative mt-10 grid w-full min-w-full grid-cols-3 items-center justify-center gap-4 sm:grid-cols-8 sm:gap-10`}
       >
         {(isSelected.length ? selectedSkills : favSkills).map((item) => (
-          <div
+          <motion.li
+            ref={ref}
+            variants={animItem}
             key={item.id}
-            className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 transition-all  duration-500 ease-in-out sm:aspect-square`}
+            className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 sm:aspect-square`}
           >
             <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-3 group-hover:bg-teal-300/10 sm:gap-4 sm:p-6">
               <p className="whitespace-nowrap text-xs tracking-tighter sm:text-sm">
@@ -57,9 +85,9 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
               <div className="h-px w-full rounded-full bg-teal-100 sm:h-1" />
               <h3>{item.name}</h3>
             </div>
-          </div>
+          </motion.li>
         ))}
-      </div>
+      </motion.ul>
     </div>
   )
 }
