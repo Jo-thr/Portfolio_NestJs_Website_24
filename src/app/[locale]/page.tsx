@@ -1,7 +1,7 @@
 import HomeSection from '@/components/Section/HomeSection'
 import Section from '@/components/Section/Section'
 import SkillsBlock from '@/components/SkillsBlock/SkillsBlock'
-import Works from '@/components/Works/works'
+import WorksSlider from '@/components/Works/worksSlider'
 import { getDictionary } from '@/hooks/getDictionary'
 import { Locale } from '../../i18n-config'
 
@@ -24,14 +24,14 @@ export default async function Home({
         subtitle={data.aboutSection.subtitle}
         text={data.aboutSection.text}
       >
-        Tchô !
+        <span className="text-[#000000]">Tchô !</span>
       </Section>
       <Section
         id={'projectSection'}
         title={data.projectSection.title}
         subtitle={data.projectSection.subtitle}
       >
-        <Works projects={projects} content={dictionary.extraContent} />
+        <WorksSlider projects={projects} content={dictionary.extraContent} />
       </Section>
       <Section
         id={'skillSection'}
