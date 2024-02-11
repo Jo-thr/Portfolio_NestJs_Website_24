@@ -6,6 +6,8 @@ import Button from '../Button/Button'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import { MoveLeft, MoveRight } from 'lucide-react'
 
+import styles from './workSlider.module.css'
+
 export type WorksSliderProps = {
   content: any
   projects: {
@@ -52,14 +54,14 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
       options={options}
       className="flex h-max w-full items-start pb-10 "
     >
-      <SplideTrack>
+      <SplideTrack className="h-max">
         {projects.map((proj) => (
           <SplideSlide
             key={proj.id}
-            className={`relative z-20 flex h-full w-full flex-col-reverse sm:flex-row ${className}`}
+            className={`relative z-20 flex h-full w-full flex-col-reverse !overflow-y-visible sm:flex-row ${className}`}
           >
             {/* LEFT CONTENT */}
-            <div className="relative h-max w-full sm:top-24 sm:w-2/5 sm:pr-40">
+            <div className="relative h-max w-full sm:top-20 sm:w-2/5 sm:pr-40">
               <div
                 className={`flex h-full w-full transform flex-row items-center justify-center gap-12 font-dm text-2xl font-bold !text-white-base text-white-dark/50 transition-all duration-500 ease-in-out hover:cursor-pointer sm:justify-end sm:text-right sm:text-5xl`}
               >
@@ -83,7 +85,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                   </div>
                 </Link>
               </div>
-              <p className="hidden text-sm leading-7 sm:-mr-32 sm:ml-[10%] sm:block">
+              <p className="hidden text-sm leading-7 !line-clamp-5 sm:-mr-32 sm:ml-[10%] sm:block">
                 {proj.description}
               </p>
               <p className="text-center text-xs sm:-mr-32 sm:ml-[10%] sm:hidden sm:leading-7">
@@ -93,7 +95,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
               <Button
                 title={content.seeProject}
                 href={`works/${proj.slug}`}
-                className="relative z-50 ml-auto mr-auto mt-6 w-max sm:-mr-20"
+                className="relative z-50 ml-auto mr-auto mt-10 w-max sm:-mr-20"
               />
             </div>
             {/* RIGHT CONTENT */}
@@ -129,14 +131,23 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
         ))}
       </SplideTrack>
 
-      <div className="splide__arrows absolute bottom-0 right-0 z-50 flex h-8 flex-row items-center gap-6">
-        <button className="splide__arrow splide__arrow--prev">
+      <div
+        className={`${styles['custom_splide']} splide__arrows absolute bottom-0 right-0 z-50 flex h-8 flex-row items-center gap-6`}
+      >
+        <button
+          className={`${styles['custom_splide__arrow--prev']} splide__arrow splide__arrow--prev`}
+        >
           <MoveLeft />
         </button>
-        <button className="splide__arrow splide__arrow--next">
-          <MoveRight />
+        <button
+          className={`${styles['custom_splide__arrow--next']} splide__arrow splide__arrow--next`}
+        >
+          <MoveRight width={40} height={40} />
         </button>
       </div>
+      <div
+        className={`${styles['work-slider-pagination']} splide__pagination`}
+      />
     </Splide>
   )
 }

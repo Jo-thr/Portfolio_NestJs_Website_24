@@ -44,6 +44,7 @@ const WorkPage = async ({
         title={data.name}
         description={data.description}
         poste={data.poste}
+        repo={data.repo}
         front={data.techno.front}
         back={data.techno.back}
         devops={data.techno.devops}

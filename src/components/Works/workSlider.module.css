@@ -1,0 +1,24 @@
+.work-slider-pagination {
+  @apply bottom-3  mx-auto w-full max-w-[70.75rem] px-[32px];
+}
+
+.work-slider-pagination button {
+  @apply h-2 w-2 rounded-xl bg-white-dark/50 transition-all duration-300 ease-in-out;
+  transform: none !important;
+}
+
+.work-slider-pagination button[aria-selected='true'] {
+  @apply h-2 w-10 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 transition-all duration-300 ease-in-out;
+}
+
+.custom_splide {
+  @apply flex h-8 w-max flex-row items-center gap-10;
+}
+
+.custom_splide__arrow--prev {
+  @apply relative top-0 w-max min-w-[8px] rotate-180 bg-transparent;
+}
+
+.custom_splide__arrow--next {
+  @apply relative min-w-[8px] bg-transparent;
+}

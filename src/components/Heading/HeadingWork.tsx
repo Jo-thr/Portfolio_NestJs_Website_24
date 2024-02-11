@@ -1,7 +1,11 @@
+import { Github, Link2 } from 'lucide-react'
+import Link from 'next/link'
+
 export interface HeadingWorkProps {
   title: string
   description?: string
   year?: string
+  repo?: string
   poste?: string
   front?: string
   back?: string
@@ -15,6 +19,7 @@ const HeadingWork = ({
   title,
   description,
   year,
+  repo,
   poste,
   front,
   back,
@@ -28,14 +33,31 @@ const HeadingWork = ({
       <div className="relative col-span-1 flex flex-col gap-6 ">
         <div className="text-lg">{poste}</div>
         <div className="flex flex-col text-sm font-thin tracking-widest">
+          {(site || repo) && (
+            <div className="mb-5 flex flex-row gap-6">
+              {site && (
+                <Link
+                  href={site}
+                  target="_blank"
+                  className="flex flex-row items-center gap-2"
+                >
+                  <Link2 className="rounded-full border p-1 " /> Website
+                </Link>
+              )}
+              {repo && (
+                <Link
+                  href={repo}
+                  target="_blank"
+                  className="flex flex-row items-center gap-2"
+                >
+                  <Github className="rounded-full border p-1 " /> Repo
+                </Link>
+              )}
+            </div>
+          )}
           {year && (
             <div>
               <b>Année :</b> {year}
-            </div>
-          )}
-          {site && (
-            <div>
-              <b>Site :</b> {site}
             </div>
           )}
         </div>

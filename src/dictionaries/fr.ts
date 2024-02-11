@@ -189,6 +189,7 @@ const FR = {
       poste: 'Developpeur Front-end',
       year: '2021-2022',
       site: 'https://www.francetvlab.fr',
+      repo: 'https://github.com/Jo-thr/francetv',
       techno: {
         front: 'Nuxt.Js, TailwindCss',
         back: 'Laravel 7, Laravel Nova',
@@ -228,6 +229,7 @@ const FR = {
 
       poste: 'Développeur FullStack',
       site: 'https://www.lesitedelauto.fr/',
+      repo: 'https://github.com/Jo-thr/LeSiteDeLAuto',
       year: '2023',
       techno: {
         front: 'Next.Js, TailwindCss, TypeScript',
@@ -308,6 +310,7 @@ const FR = {
 
       poste: 'Développeur FullStack',
       year: '2022',
+      repo: 'https://github.com/Jo-thr/RexelExpo',
       techno: {
         front: 'Next.Js, TailwindCss, TypeScript',
         devops: 'Gitlab CI, Vercel',
@@ -388,6 +391,7 @@ const FR = {
       poste: 'Developpeur FullStack',
       year: '2021',
       site: 'https://wedigital.garden',
+      repo: 'https://github.com/Jo-thr/WeDigitalGarden-Front',
       techno: {
         front: 'Nuxt.Js, TailwindCss, Vue.Js',
         back: 'Laravel Nova',
