@@ -23,7 +23,7 @@ const HomeSection = ({ data }: HomeSectionProps) => {
           src={LogoAnimation}
           alt="DesktopOnly"
           className="z-20 w-1/4"
-          unoptimized
+          priority
         />
       </div>
       <div className="relative flex h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:h-screen sm:flex-row">
