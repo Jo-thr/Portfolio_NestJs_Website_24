@@ -1,5 +1,5 @@
 .work-slider-pagination {
-  @apply bottom-3  mx-auto w-full max-w-[70.75rem] px-[32px];
+  @apply mx-auto  w-full max-w-[70.75rem] px-[32px] sm:bottom-3;
 }
 
 .work-slider-pagination button {

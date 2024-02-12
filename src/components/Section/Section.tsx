@@ -26,7 +26,7 @@ const Section = ({
     <section
       ref={ref}
       id={id}
-      className={`${className} relative w-full flex-col items-center px-10 py-32 sm:p-40`}
+      className={`${className} relative w-full flex-col items-center px-10 pt-32 sm:p-40`}
       style={{
         transform: isInView ? 'none' : 'translateY(200px)',
         opacity: isInView ? 1 : 0,

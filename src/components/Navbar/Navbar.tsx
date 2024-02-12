@@ -1,6 +1,5 @@
 'use client'
-import Button from '@/components/Button/Button'
-import { IconType, ImageSVG } from '@/components/Icons/Icons'
+import { ImageSVG } from '@/components/Icons/Icons'
 import Switcher from '@/components/Switcher/Switcher'
 import MinLogo from '@public/images/LOGO-POINT.svg'
 import Image from 'next/image'
@@ -60,34 +59,38 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
             : 'rounded-[3rem] bg-black-dark/50'
         } fixed bottom-[2vh] left-[3vw] z-50 w-[94vw] transform border border-black-medium bg-black-dark/50 backdrop-blur-md transition-all duration-500 ease-in-out sm:bottom-[5vh]`}
       >
-        <div
-          className={`${
-            isOpen ? 'opacity-100 ' : 'opacity-0'
-          } text-white-lighten absolute left-1/2 z-40 -mt-10 w-max translate-x-[-50%] font-allison tracking-widest transition-opacity delay-150 duration-500`}
-        >
-          - {content.menu} -
-        </div>
         <div className="relative flex flex-row items-center justify-between p-2">
-          <div className="ml-3 flex flex-row items-center justify-start gap-4">
+          <div
+            className={`${
+              pathname === '/' ? 'ml-3' : 'sm:ml-3'
+            } flex flex-row items-center justify-start gap-4`}
+          >
             <Link href={`/${locale}`}>
-              <Image src={MinLogo} alt={'Logo'} className="h-8 max-w-[2rem]" />
+              <Image
+                src={MinLogo}
+                alt={'Logo'}
+                className={`${
+                  pathname === '/' ? 'block' : 'hidden'
+                } h-8 max-w-[2rem] sm:block`}
+              />
             </Link>
             <h5
               className={`font-poppins ${
                 isOpen && 'opacity-10'
-              } transform text-xl transition-all duration-500 ease-in-out`}
+              } transform text-base transition-all duration-500 ease-in-out sm:text-xl`}
             >
               {urlSegments.slice(-1)}
             </h5>
           </div>
-          <Button
+          <div
             title={isOpen ? content.close : content.menu}
-            icon={IconType[isOpen ? 'CROSS' : 'CHEVRON_UP']}
             onClick={handleMenu}
-            className={
-              'transform font-poppins transition-all duration-500 ease-in-out sm:hidden'
-            }
-          />
+            className={`${
+              isOpen ? 'border-white-base' : 'border-transparent'
+            } transform items-center justify-center rounded-full border border-transparent bg-gradient-to-br from-teal-300 via-pink-400 to-orange-500 bg-clip-border p-1.5 hover:cursor-pointer sm:hidden`}
+          >
+            {ImageSVG[isOpen ? 'CROSS' : 'CHEVRON_UP']}
+          </div>
           <div className="mr-3 flex flex-row items-center justify-end gap-10 sm:mr-0">
             <Switcher
               className={`${
@@ -113,8 +116,8 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
         </div>
         {isOpen && (
           <div className="relative mt-1 w-full border-t border-black-medium p-6 ">
-            <h5 className={`font-poppins text-lg`}>Pages</h5>
-            <div className="flex flex-row gap-4">
+            <h5 className={`hidden font-poppins text-lg sm:block`}>Pages</h5>
+            <div className="grid grid-cols-2 flex-col gap-2 whitespace-nowrap text-sm sm:flex sm:flex-row sm:gap-4 sm:text-base">
               {dataSummary?.map((item: any) => (
                 <Link
                   key={item.id}

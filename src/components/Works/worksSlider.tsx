@@ -85,10 +85,10 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                   </div>
                 </Link>
               </div>
-              <p className="hidden text-sm leading-7 !line-clamp-5 sm:-mr-32 sm:ml-[10%] sm:block">
+              <p className="!hidden text-sm leading-7 line-clamp-5 sm:-mr-32 sm:ml-[10%] md:!block">
                 {proj.description}
               </p>
-              <p className="text-center text-xs sm:-mr-32 sm:ml-[10%] sm:hidden sm:leading-7">
+              <p className="text-center text-sm sm:-mr-32 sm:ml-[10%] sm:hidden sm:leading-7">
                 {proj.short_description}
               </p>
 
@@ -132,7 +132,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
       </SplideTrack>
 
       <div
-        className={`${styles['custom_splide']} splide__arrows absolute bottom-0 right-0 z-50 flex h-8 flex-row items-center gap-6`}
+        className={`${styles['custom_splide']} splide__arrows absolute bottom-0 right-0 z-50 !hidden h-8 flex-row items-center gap-6 sm:!flex`}
       >
         <button
           className={`${styles['custom_splide__arrow--prev']} splide__arrow splide__arrow--prev`}

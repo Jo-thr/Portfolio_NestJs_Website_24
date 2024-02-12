@@ -66,7 +66,7 @@ const WorkPage = async ({
             key={item.title}
             className={`${
               data.projet.length > 2 && (index === 0 || index === 4)
-                ? 'col-span-2 row-span-2 h-full'
+                ? 'col-span-2 row-span-2 sm:h-full'
                 : ' col-span-1 row-span-1'
             } relative col-span-1 aspect-[10/7] w-full rounded-2xl border border-white-dark p-2`}
           >
@@ -99,7 +99,7 @@ const WorkPage = async ({
             key={item.title}
             className={`${
               data.projet.length > 2 && index === 1
-                ? 'col-span-2 row-span-2 h-full'
+                ? 'col-span-2 row-span-2 sm:h-full'
                 : ' col-span-1 row-span-1'
             } relative col-span-1 aspect-[10/7] w-full rounded-2xl border border-white-dark  p-2`}
           >

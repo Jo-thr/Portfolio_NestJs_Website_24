@@ -28,5 +28,5 @@ h3 {
 }
 
 p {
-  @apply whitespace-pre-line font-poppins font-light tracking-wider sm:font-thin;
+  @apply whitespace-pre-line font-poppins text-sm font-light tracking-wider sm:text-base sm:font-thin;
 }
