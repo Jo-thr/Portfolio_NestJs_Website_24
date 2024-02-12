@@ -1,7 +1,7 @@
 'use client'
 
-import Desktop from '@public/images/desktop.jpg'
-import DesktopOnly from '@public/images/desktopOnly.png'
+import Desktop from '@public/images/desktop.webp'
+import DesktopOnly from '@public/images/desktopOnly.webp'
 import LogoAnimation from '@public/images/logo-animation.png'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
@@ -19,11 +19,17 @@ const HomeSection = ({ data }: HomeSectionProps) => {
       <div
         className={` absolute z-50 flex h-[80vh] w-full transform animate-deappear items-center justify-center bg-[#000000] transition-all duration-500 ease-in-out sm:h-screen`}
       >
-        <Image src={LogoAnimation} alt="DesktopOnly" className="z-20 w-1/4" />
+        <Image
+          src={LogoAnimation}
+          alt="DesktopOnly"
+          className="z-20 w-1/4"
+          unoptimized
+        />
       </div>
       <div className="relative flex h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:h-screen sm:flex-row">
         <Image
           src={DesktopOnly}
+          loading="lazy"
           alt="DesktopOnly"
           className={`${styles.desktopImg} absolute top-1/2 z-20 sm:top-0`}
         />
