@@ -449,6 +449,40 @@ const EN = {
     //     { img: '07-AGG.png', title: 'FAQ Page' },
     //   ],
     // },
+
+    // FOXYLIB
+    {
+      id: 8,
+      slug: 'foxylib',
+      name: 'Foxylib',
+
+      poste: 'FullStack Developper ',
+      year: 'In progress',
+      site: 'https://foxylib.netlify.app',
+      repo: 'https://github.com/Jo-thr/foxylib',
+      techno: {
+        front: 'Next.Js, TailwindCss',
+        tools: 'GitHub, Figma',
+      },
+
+      short_description:
+        'Foxylib is an open-source library of UI components based on Next.Js & Tailwind CSS framework',
+      description: `Foxylib is an open-source library of UI components based on Next.Js & Tailwind CSS framework.
+      It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers.
+      All of the elements are built using the utility classes from Tailwind CSS and Next.Js.`,
+
+      img: {
+        color: '#0123FF',
+        logo: Media.FOX.logo,
+        cover: Media.FOX.IF,
+      },
+
+      projet: [
+        { img: Media.FOX.proj[0], title: 'Category Page' },
+        { img: Media.FOX.proj[1], title: 'Component Page' },
+        { img: Media.FOX.proj[2], title: 'Component Page' },
+      ],
+    },
   ],
   extraContent: {
     menu: 'Menu',

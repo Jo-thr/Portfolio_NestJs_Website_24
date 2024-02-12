@@ -85,13 +85,15 @@ const WorkPage = async ({
             </div>
           </div>
         ))}
-        <div className="relative col-span-3 my-20 flex w-full flex-col gap-6">
-          <div className="absolute -top-4 -left-4 -rotate-3 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text font-allison text-4xl text-transparent">
-            Mission
+        {(data.mission || data.contribution) && (
+          <div className="relative col-span-3 my-20 flex w-full flex-col gap-6">
+            <div className="absolute -top-4 -left-4 -rotate-3 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text font-allison text-4xl text-transparent">
+              Mission
+            </div>
+            <p>{data.mission}</p>
+            <p>{data.contribution}</p>
           </div>
-          <p>{data.mission}</p>
-          <p>{data.contribution}</p>
-        </div>
+        )}
         {data.projet.slice(3, 10).map((item, index) => (
           <div
             key={item.title}

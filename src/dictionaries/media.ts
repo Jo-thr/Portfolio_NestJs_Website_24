@@ -47,7 +47,18 @@ import Proj05WDG from '@public/projects/wedigitalgarden/05-WDG.png'
 import Proj06WDG from '@public/projects/wedigitalgarden/06-WDG.png'
 import Proj07WDG from '@public/projects/wedigitalgarden/07-WDG.png'
 
+import FOXIF from '@public/projects/FOX-IF.png'
+import FOXLogo from '@public/projects/FOX-Logo.png'
+import Proj01FOX from '@public/projects/foxylib/01-foxylib.png'
+import Proj02FOX from '@public/projects/foxylib/02-foxylib.png'
+import Proj03FOX from '@public/projects/foxylib/03-foxylib.png'
+
 export const Media = {
+  FOX: {
+    logo: FOXLogo,
+    IF: FOXIF,
+    proj: [Proj01FOX, Proj02FOX, Proj03FOX],
+  },
   FTV: {
     logo: FTVLogo,
     IF: FTVIF,
