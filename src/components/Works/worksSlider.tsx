@@ -25,7 +25,7 @@ export type WorksSliderProps = {
       devops?: string
       tools?: string
     }
-    mission: string
+    mission?: string
     short_description: string
     description: string
     contribution?: string
