@@ -74,7 +74,7 @@ const EN = {
         { id: '24', name: 'Storybook', domain: 'Front', fav: false },
         { id: '25', name: 'Strapi', domain: 'CMS', fav: true },
         { id: '26', name: 'Suite Adobe', domain: 'Design', fav: true },
-        { id: '27', name: 'Tailwind', domain: 'Front', fav: true },
+        { id: '27', name: 'Tailwind css', domain: 'Front', fav: true },
         { id: '28', name: 'Teams', domain: 'Tool', fav: false },
         { id: '29', name: 'Trello', domain: 'Tool', fav: false },
         { id: '30', name: 'Typescript', domain: 'Front', fav: true },
@@ -96,22 +96,22 @@ const EN = {
     {
       id: '01',
       title: 'About',
-      link: '/about',
+      link: '/#aboutSection',
     },
     {
       id: '02',
-      title: 'Skills',
-      link: '/skills',
-    },
-    {
-      id: '03',
       title: 'CV',
       link: '/cv',
     },
     {
+      id: '03',
+      title: 'Skills',
+      link: '/#skillSection',
+    },
+    {
       id: '04',
       title: 'Selected works',
-      link: '/works',
+      link: '/#projectSection',
     },
     {
       id: '05',

@@ -52,7 +52,7 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
   }
   return (
     <div className="-mt-6 w-full animate-appear opacity-0 sm:mt-20">
-      <div className="flex flex-wrap items-center gap-2 sm:flex-row sm:gap-4">
+      <div className="flex flex-wrap items-center gap-2 sm:flex-row sm:gap-3">
         {data.tags.map((tag) => (
           <Tag
             key={tag.id}
@@ -76,14 +76,14 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
             ref={ref}
             variants={animItem}
             key={item.id}
-            className={`group aspect-[9/10] w-full rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 sm:aspect-square`}
+            className={`group aspect-[9/10] w-full hover:cursor-pointer rounded-md bg-gradient-to-br from-teal-300 via-pink-600 to-orange-500 p-0.5 sm:aspect-square`}
           >
-            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-3 group-hover:bg-teal-300/10 sm:gap-4 sm:p-6">
+            <div className="flex h-full w-full flex-col gap-3 rounded-md bg-[#000] p-3 group-hover:bg-teal-300/10 sm:gap-3 sm:p-4">
               <p className="whitespace-nowrap text-xs tracking-tighter sm:text-sm">
                 {item.domain}
               </p>
-              <div className="h-px w-full rounded-full bg-teal-100 sm:h-1" />
-              <h3>{item.name}</h3>
+              <div className="h-px w-full rounded-full bg-teal-100 min-h-[1px]" />
+              <h4 className='uppercase font-inter font-bold leading-5'>{item.name}</h4>
             </div>
           </motion.li>
         ))}

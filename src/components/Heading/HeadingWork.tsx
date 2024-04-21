@@ -31,8 +31,8 @@ const HeadingWork = ({
   return (
     <div className="relative mt-10 mb-20 flex w-full transform animate-reveal grid-cols-3 flex-col-reverse px-10 opacity-0 transition-all duration-700 ease-in-out sm:mt-28 sm:grid sm:flex-row sm:px-40">
       <div className="relative col-span-1 flex flex-col gap-6 ">
-        <div className="text-lg">{poste}</div>
-        <div className="flex flex-col text-sm font-thin tracking-widest">
+        <div className="text-lg uppercase italic">{poste}</div>
+        <div className="flex flex-col text-sm font-thin font-inter tracking-widest">
           {(site || repo) && (
             <div className="mb-5 flex flex-row gap-6">
               {site && (
@@ -61,7 +61,7 @@ const HeadingWork = ({
             </div>
           )}
         </div>
-        <div className="text-sm font-thin tracking-widest">
+        <div className="text-sm font-thin font-inter tracking-widest">
           {front && (
             <div>
               <b>Front:</b> {front}

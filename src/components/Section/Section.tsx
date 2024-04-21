@@ -39,7 +39,7 @@ const Section = ({
         </h5>
         <h2 className="font-dm sm:ml-4">{title}</h2>
         <p
-          className="mt-10 w-full sm:w-3/4"
+          className="mt-10 w-full sm:w-3/4 font-inter"
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,

@@ -26,7 +26,7 @@ const Switcher = ({ className }: SwitchMinProps) => {
       {locale === 'fr' ? (
         <button
           onClick={() => handleLocaleChange('en')}
-          className="flex flex-row gap-2"
+          className="flex flex-row gap-2 font-inter items-center"
         >
           <Globe className="stroke-white-base " />
           FR
@@ -34,7 +34,7 @@ const Switcher = ({ className }: SwitchMinProps) => {
       ) : (
         <button
           onClick={() => handleLocaleChange('fr')}
-          className="flex flex-row gap-2"
+          className="flex flex-row gap-2 font-inter items-center"
         >
           <Globe className="stroke-white-base " />
           EN

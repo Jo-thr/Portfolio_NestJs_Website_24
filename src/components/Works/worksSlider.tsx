@@ -85,7 +85,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                   </div>
                 </Link>
               </div>
-              <p className="!hidden text-sm leading-7 line-clamp-5 sm:-mr-32 sm:ml-[10%] md:!block">
+              <p className="!hidden text-sm leading-6 !line-clamp-5 sm:-mr-24 sm:ml-[10%] md:block">
                 {proj.description}
               </p>
               <p className="text-center text-sm sm:-mr-32 sm:ml-[10%] sm:hidden sm:leading-7">

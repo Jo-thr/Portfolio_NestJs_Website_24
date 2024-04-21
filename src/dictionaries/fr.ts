@@ -10,9 +10,9 @@ const FR = {
     aboutSection: {
       subtitle: 'À propos',
       title: 'Comment puis-je vous aider ?',
-      text: `Je suis développeur web Front-End spécialisé sur le langage de programmation React un langage qui permettra à votre projet d'être extrêmement rapide, et facilement maintenable, la recette idéale pour faire la différence de nos jours, sur tous les points de vue.
-      J'apprends et j'intègre les dernières technologies et techniques pour réduire le temps de chargement des pages web. J'utilise mes connaissances et mes outils pour gagner du temps de développement, notamment grâce à des pré-processeurs et avec l'aide de framework front-end personnalisé que j'utilise pour chaque nouveau projet.
-      De manière très générale, je suis le bon partenaire pour créer tous types de projets web, que ce soit la simple création d'un site internet à l'application web, cependant mon domaine de compétence encadre des projets se voulant "sur mesure" "connectés a d'autres services (API)" mais surtout "a la pointe de la technologie".`,
+      text: `En tant que développeur web Front-End expert en React, je suis votre atout ultime pour un projet rapide, fluide et facile à entretenir. 
+      Je garde constamment un oeil sur les dernières technologies et techniques pour garantir des temps de chargement minimaux et une expérience utilisateur optimale. Grâce à mes compétences et mes outils, je réduis considérablement le temps de développement, en utilisant des pré-processeurs et des frameworks personnalisés sur mesure pour chaque projet. 
+      Que vous ayez besoin d'un site web élégant ou d'une application web complexe, je suis là pour transformer votre vision en réalité, en vous offrant des solutions sur mesure, connectées à des services externes via des API, et toujours à la pointe de l'innovation technologique.`,
     },
     projectSection: {
       subtitle: 'Selection de travaux',
@@ -79,7 +79,7 @@ const FR = {
         { id: '24', name: 'Storybook', domain: 'Front', fav: false },
         { id: '25', name: 'Strapi', domain: 'CMS', fav: true },
         { id: '26', name: 'Suite Adobe', domain: 'Design', fav: true },
-        { id: '27', name: 'Tailwindcss', domain: 'Front', fav: true },
+        { id: '27', name: 'Tailwind css', domain: 'Front', fav: true },
         { id: '28', name: 'Teams', domain: 'Outil', fav: false },
         { id: '29', name: 'Trello', domain: 'Outil', fav: false },
         { id: '30', name: 'Typescript', domain: 'Front', fav: true },
