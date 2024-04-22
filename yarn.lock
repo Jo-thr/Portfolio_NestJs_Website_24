@@ -148,6 +148,11 @@
   resolved "https://registry.yarnpkg.com/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.2.tgz#148e96dfd6e68747da41a311b9ee4559bb1b1471"
   integrity sha512-E4magOks77DK47FwHUIGH0RYWSgRBfGdK56kIHSVeB9uIS4pPFr4N2kIVsXdQQo4LzOsENKV5KAhRlRL7eMAdg==
 
+"@netlify/next@^1.4.9":
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@netlify/next/-/next-1.4.9.tgz#50e7bc72f9c5897ffdf1ec10d585a1a3ea15048a"
+  integrity sha512-lrbY+CEhS9x0jV7oXVYi/rqxZ6ht5KeLGNZsgIPI34kpDaBuD/EfsyKa28BWeSrFalxRZmkMxQYRSTa82v3roQ==
+
 "@next/env@14.0.3":
   version "14.0.3"
   resolved "https://registry.npmjs.org/@next/env/-/env-14.0.3.tgz"

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "0.2.32",
+    "@netlify/next": "^1.4.9",
     "@splidejs/react-splide": "^0.7.12",
     "@tailwindcss/line-clamp": "^0.4.4",
     "cookie": "^0.6.0",
