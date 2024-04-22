@@ -32,7 +32,6 @@ module.exports = {
       fontFamily: {
         dm: ['var(--font-dm-serif)'],
         allison: ['var(--font-allison)'],
-        poppins: ['var(--font-poppins)'],
         inter: ['var(--font-inter)'],
       },
       animation: {

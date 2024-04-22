@@ -6,7 +6,7 @@ import { getDictionary } from '@/hooks/getDictionary'
 import { i18n } from '@/i18n-config'
 import MinLogo from '@public/images/LOGO-POINT.svg'
 import '@splidejs/react-splide/css'
-import { Allison, DM_Serif_Display, Inter, Poppins } from 'next/font/google'
+import { Allison, DM_Serif_Display, Inter } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -26,12 +26,6 @@ const allison = Allison({
   variable: '--font-allison',
 })
 
-const poppins = Poppins({
-  weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-poppins',
-})
-
 const inter = Inter({
   weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
@@ -49,7 +43,7 @@ export default async function RootLayout({
   return (
     <html lang={params.locale}>
       <body
-        className={`min-h-screen min-w-full overflow-visible ${dm.variable} ${allison.variable} ${poppins.variable} ${inter.variable}`}
+        className={`min-h-screen min-w-full overflow-visible ${dm.variable} ${allison.variable} ${inter.variable}`}
       >
         <Link
           href={`/${params.locale}`}
