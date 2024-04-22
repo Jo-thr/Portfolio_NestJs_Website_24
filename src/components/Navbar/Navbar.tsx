@@ -121,7 +121,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
               {dataSummary?.map((item: any) => (
                 <Link
                   key={item.id}
-                  href={item.link}
+                  href={item.id === '05' ? `mailto:johnjohn.thr@gmail.com?subject=${item.link}` : item.link}
                   className={`${
                     pathname.includes(item.link) && 'line-through opacity-20'
                   }`}
