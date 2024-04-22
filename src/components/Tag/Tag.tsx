@@ -13,7 +13,7 @@ const Tag = ({ title, className, isSelected, onClick }: TagProps) => {
       className={`${
         isSelected === title &&
         'border-none bg-gradient-to-br !from-teal-300 !via-pink-600 !to-orange-500 bg-clip-border'
-      } font-inter flex transform flex-row items-center justify-center gap-3 rounded-full border border-gray-600 px-4 py-2 text-sm transition-all duration-500 ease-in-out hover:cursor-pointer hover:bg-gradient-to-br hover:border-none hover:bg-clip-border from-teal-300/80 via-pink-600/80 to-orange-500/80 sm:text-xs sm:tracking-normal ${className}`}
+      } font-poppins flex transform flex-row items-center justify-center gap-3 rounded-full border border-gray-600 px-4 py-2 text-sm transition-all duration-500 ease-in-out hover:cursor-pointer hover:bg-gradient-to-br hover:border-none hover:bg-clip-border from-teal-300/80 via-pink-600/80 to-orange-500/80 sm:text-xs sm:tracking-normal ${className}`}
       onClick={onClick}
     >
       <h5>{title}</h5>

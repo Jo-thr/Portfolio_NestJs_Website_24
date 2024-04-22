@@ -70,7 +70,7 @@ const WorkPage = async ({
                 : ' col-span-1 row-span-1'
             } relative col-span-1 aspect-[10/7] w-full rounded-2xl border border-white-dark p-2`}
           >
-            <div className="absolute font-inter -top-8 left-0 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text text-sm text-transparent">
+            <div className="absolute font-poppins -top-8 left-0 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text text-sm text-transparent">
               {item.title}
             </div>
             <div className="relative h-full w-full overflow-x-hidden overflow-y-scroll rounded-md">
@@ -103,7 +103,7 @@ const WorkPage = async ({
                 : ' col-span-1 row-span-1'
             } relative col-span-1 aspect-[10/7] w-full rounded-2xl border border-white-dark  p-2`}
           >
-            <div className="absolute font-inter -top-8 left-0 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text text-sm text-transparent">
+            <div className="absolute font-poppins -top-8 left-0 bg-gradient-to-r from-teal-300 via-pink-600 to-orange-500 bg-clip-text text-sm text-transparent">
               {item.title}
             </div>
             <div className="relative h-full w-full overflow-hidden overflow-y-scroll rounded-md">

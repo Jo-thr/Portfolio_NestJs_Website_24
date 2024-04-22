@@ -75,7 +75,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
               />
             </Link>
             <h5
-              className={`font-inter ${
+              className={`font-poppins ${
                 isOpen && 'opacity-10'
               } transform text-base transition-all duration-500 ease-in-out sm:text-xl`}
             >
@@ -106,7 +106,7 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
               <div
                 className={`${
                   isOpen ? 'bg-transparent' : 'bg-black-dark'
-                } flex flex-row items-center font-inter justify-center gap-3 rounded-full px-4 py-2 sm:px-6 sm:py-3`}
+                } flex flex-row items-center font-poppins justify-center gap-3 rounded-full px-4 py-2 sm:px-6 sm:py-3`}
               >
                 <h5>{isOpen ? content.close : content.menu}</h5>
                 {ImageSVG[isOpen ? 'CROSS' : 'CHEVRON_UP']}
@@ -116,8 +116,8 @@ const Navbar = ({ dataSummary, content }: NavbarProps) => {
         </div>
         {isOpen && (
           <div className="relative mt-1 w-full border-t border-black-medium p-6">
-            <h5 className={`hidden font-inter font-bold text-lg sm:block mb-4`}>Pages</h5>
-            <div className="grid grid-cols-2 flex-col gap-4 whitespace-nowrap text-sm sm:flex sm:flex-row sm:gap-8 sm:text-base font-light !font-inter">
+            <h5 className={`hidden font-poppins font-bold text-lg sm:block mb-4`}>Pages</h5>
+            <div className="grid grid-cols-2 flex-col gap-4 whitespace-nowrap text-sm sm:flex sm:flex-row sm:gap-8 sm:text-base font-light !font-poppins">
               {dataSummary?.map((item: any) => (
                 <Link
                   key={item.id}

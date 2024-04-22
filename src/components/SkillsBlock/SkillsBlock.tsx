@@ -83,7 +83,7 @@ const SkillsBlock = ({ data }: SkillsBlockProps) => {
                 {item.domain}
               </p>
               <div className="h-px w-full rounded-full bg-teal-100 min-h-[1px]" />
-              <h4 className='uppercase font-inter font-bold leading-5'>{item.name}</h4>
+              <h4 className='uppercase font-poppins font-bold leading-5'>{item.name}</h4>
             </div>
           </motion.li>
         ))}
