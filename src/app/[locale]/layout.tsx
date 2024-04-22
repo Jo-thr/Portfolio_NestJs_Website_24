@@ -27,7 +27,7 @@ const allison = Allison({
 })
 
 const inter = Inter({
-  weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-inter',
 })
@@ -36,10 +36,10 @@ export default async function RootLayout({
   children,
   params,
 }: {
-  children: React.ReactNode
-  params: { locale: 'en' | 'fr' }
+  children: React.ReactNode;
+  params: { locale: 'fr' | 'en' };
 }) {
-  const dictionary = await getDictionary(params.locale)
+  const dictionary = await getDictionary(params.locale);
   return (
     <html lang={params.locale}>
       <body suppressHydrationWarning={true}

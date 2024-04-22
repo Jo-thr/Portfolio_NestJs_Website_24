@@ -99,11 +99,11 @@ const FR = {
       title: 'À Propos',
       link: '/#aboutSection',
     },
-    {
-      id: '02',
-      title: 'CV',
-      link: '/cv',
-    },
+    // {
+    //   id: '02',
+    //   title: 'CV',
+    //   link: '/cv',
+    // },
     {
       id: '03',
       title: 'Compétences',
@@ -133,11 +133,11 @@ const FR = {
         title: 'À Propos',
         link: '/#aboutSection',
       },
-      {
-        id: '02',
-        title: 'CV',
-        link: '/cv',
-      },
+      // {
+      //   id: '02',
+      //   title: 'CV',
+      //   link: '/cv',
+      // },
       {
         id: '03',
         title: 'Compétences',

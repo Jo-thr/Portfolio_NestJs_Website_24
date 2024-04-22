@@ -98,11 +98,11 @@ const EN = {
       title: 'About',
       link: '/#aboutSection',
     },
-    {
-      id: '02',
-      title: 'CV',
-      link: '/cv',
-    },
+    // {
+    //   id: '02',
+    //   title: 'CV',
+    //   link: '/cv',
+    // },
     {
       id: '03',
       title: 'Skills',
@@ -133,11 +133,11 @@ const EN = {
         title: 'About',
         link: '/#aboutSection',
       },
-      {
-        id: '02',
-        title: 'CV',
-        link: '/cv',
-      },
+      // {
+      //   id: '02',
+      //   title: 'CV',
+      //   link: '/cv',
+      // },
       {
         id: '03',
         title: 'Skills',
