@@ -41,5 +41,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // matcher solution for public, api, assets and _next exclusion
-  matcher: '/((?!api|static|.*\\..*|_next).*)',
+  // matcher: '/((?!api|static|.*\\..*|_next).*)',
+  matcher: ['/((?!api|_next|.*\\..*).*)']
 }
