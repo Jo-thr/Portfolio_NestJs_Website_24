@@ -81,6 +81,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                       alt={proj.name}
                       style={{ objectFit: 'cover' }}
                       fill
+                      sizes="(max-width: 720px) 100vw,)"
                     />
                   </div>
                 </Link>
@@ -109,6 +110,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                     alt={proj.name}
                     style={{ objectFit: 'cover' }}
                     fill
+                    sizes="(max-width: 768px) 100vw,)"
                   />
                 </div>
               </Link>
@@ -123,6 +125,7 @@ const WorksSlider = ({ projects, content, className }: WorksSliderProps) => {
                     style={{ objectFit: 'contain' }}
                     fill
                     className="rotate-3"
+                    sizes="(max-width: 400px) 100vw,)"
                   />
                 </div>
               </div>

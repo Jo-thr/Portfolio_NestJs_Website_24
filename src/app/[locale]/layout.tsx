@@ -42,14 +42,14 @@ export default async function RootLayout({
   const dictionary = await getDictionary(params.locale)
   return (
     <html lang={params.locale}>
-      <body
+      <body suppressHydrationWarning={true}
         className={`min-h-screen min-w-full overflow-visible ${dm.variable} ${allison.variable} ${inter.variable}`}
       >
         <Link
           href={`/${params.locale}`}
           className="fixed top-[5vh] left-[3vw] z-50 w-[94vw] "
         >
-          <Image src={MinLogo} alt={'Logo'} className="max-w-[2rem]" />
+          <Image src={MinLogo} alt={'Logo'} className="max-w-[2rem]" priority />
         </Link>
         {children}
         <Navbar

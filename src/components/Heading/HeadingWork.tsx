@@ -44,7 +44,7 @@ const HeadingWork = ({
                   <Link2 className="rounded-full border p-1 " /> Website
                 </Link>
               )}
-              {repo && (
+              {/* {repo && (
                 <Link
                   href={repo}
                   target="_blank"
@@ -52,7 +52,7 @@ const HeadingWork = ({
                 >
                   <Github className="rounded-full border p-1 " /> Repo
                 </Link>
-              )}
+              )} */}
             </div>
           )}
           {year && (
