@@ -42,5 +42,13 @@ export function middleware(request: NextRequest) {
 export const config = {
   // matcher solution for public, api, assets and _next exclusion
   // matcher: '/((?!api|static|.*\\..*|_next).*)',
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!api|admin|_next/static|_next/image|_ipx|assets|favicon.ico|public).*)",
+  ],
 }
